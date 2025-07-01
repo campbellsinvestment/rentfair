@@ -265,14 +265,16 @@ export const fetchRentalData = async (): Promise<RentalRecord[]> => {
   try {
     // First try to load from the static file
     const isServer = typeof window === 'undefined';
-    const baseUrl = isServer ? process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000' : '';
+    
+    // On the server, use a relative path instead of localhost URL
+    // This ensures it works both locally and on Vercel
+    const staticDataPath = isServer ? '/data/cmhc-data.json' : '/data/cmhc-data.json';
     
     console.log('🔍 Fetching CMHC data from static file');
     try {
       // Attempt to load from static file first (much faster and more reliable)
-      const staticDataUrl = `${baseUrl}/data/cmhc-data.json`;
-      const staticResponse = await fetch(staticDataUrl, { 
-        cache: 'force-cache',
+      const staticResponse = await fetch(staticDataPath, { 
+        // Use only one caching strategy to fix the conflict
         next: { revalidate: 86400 } // Revalidate once per day
       });
       
@@ -291,9 +293,13 @@ export const fetchRentalData = async (): Promise<RentalRecord[]> => {
     
     // Fallback to API if static file loading fails
     console.log('🔍 Falling back to API data fetch');
-    const apiUrl = `${baseUrl}/api/cmhc-data`;
+    // Use a relative path for API access too - works in both environments
+    const apiPath = '/api/cmhc-data';
     
-    const response = await fetch(apiUrl);
+    const response = await fetch(apiPath, {
+      // Consistent caching strategy
+      next: { revalidate: 86400 }
+    });
     
     if (!response.ok) {
       throw new Error(`Failed to fetch data from API proxy: ${response.statusText}`);
@@ -301,200 +307,206 @@ export const fetchRentalData = async (): Promise<RentalRecord[]> => {
     
     const responseData = await response.json();
     
-    if (!responseData.data) {
-      throw new Error('Invalid response from API proxy');
-    }
-    
-    // Parse the CSV data
-    const csvData = responseData.data;
-    const parsedData = Papa.parse<Record<string, string>>(csvData, {
-      header: true,
-      skipEmptyLines: true
-    });
-    
-    if (!parsedData.data || parsedData.data.length === 0) {
-      throw new Error('No data found in the CSV response');
-    }
-    
-    // Identify field names that match what we need
-    const sampleRecord = parsedData.data[0];
-    const fieldMap = identifyFieldNames(sampleRecord);
-    
-    // If we couldn't find the bedroom field, try alternative approaches
-    if (!fieldMap.Bedrooms) {
-      const potentialBedroomFields = ['Type of unit', 'Dwelling type', 'Unit type'];
+    // Handle both new and old API response formats
+    if (responseData.data && Array.isArray(responseData.data)) {
+      // New format - processed data is already in the right format
+      cachedData = responseData.data;
+      return responseData.data;
+    } else if (responseData.data && typeof responseData.data === 'string') {
+      // Old format - need to parse CSV
+      // Parse the CSV data
+      const csvData = responseData.data;
+      const parsedData = Papa.parse<Record<string, string>>(csvData, {
+        header: true,
+        skipEmptyLines: true
+      });
       
-      for (const field of potentialBedroomFields) {
-        if (sampleRecord[field]) {
-          fieldMap.Bedrooms = field;
-          break;
+      if (!parsedData.data || parsedData.data.length === 0) {
+        throw new Error('No data found in the CSV response');
+      }
+      
+      // Identify field names that match what we need
+      const sampleRecord = parsedData.data[0];
+      const fieldMap = identifyFieldNames(sampleRecord);
+      
+      // If we couldn't find the bedroom field, try alternative approaches
+      if (!fieldMap.Bedrooms) {
+        const potentialBedroomFields = ['Type of unit', 'Dwelling type', 'Unit type'];
+        
+        for (const field of potentialBedroomFields) {
+          if (sampleRecord[field]) {
+            fieldMap.Bedrooms = field;
+            break;
+          }
         }
       }
-    }
-    
-    // Process the data
-    const processedData = parsedData.data
-      // Filter out rows without city/location data or value data
-      .filter(record => record[fieldMap.GEO] && record[fieldMap.VALUE])
-      // Filter for Ontario cities
-      .filter(record => {
-        const geo = record[fieldMap.GEO];
-        return geo && (
-          geo.endsWith(', Ontario') || 
-          geo.includes('Ontario') || 
-          geo.includes('ON,') ||
-          geo.includes(', ON')
-        );
-      })
-      // Map to our expected format
-      .map(record => {
-        let bedroomInfo = '';
-        
-        // Extract bedroom info from available fields
-        if (fieldMap.Bedrooms && record[fieldMap.Bedrooms]) {
-          bedroomInfo = record[fieldMap.Bedrooms];
-        } else {
-          // Look for any field that might contain bedroom info
-          for (const [key, value] of Object.entries(record)) {
-            const lowerKey = key.toLowerCase();
-            const lowerValue = (value || '').toLowerCase();
-            
-            if (
-              lowerKey.includes('bedroom') || 
-              lowerKey.includes('unit') || 
-              lowerValue.includes('bedroom') || 
-              lowerValue.includes('bachelor')
-            ) {
-              bedroomInfo = value;
-              break;
-            }
-          }
-        }
-        
-        // Extract reference date information
-        let refDate = '';
-        if (fieldMap.RefDate && record[fieldMap.RefDate]) {
-          refDate = record[fieldMap.RefDate];
-        } else {
-          // Look for any field that might contain date information
-          for (const [key, value] of Object.entries(record)) {
-            const lowerKey = key.toLowerCase();
-            const lowerValue = (value || '').toLowerCase();
-            
-            if (
-              lowerKey.includes('date') || 
-              lowerKey.includes('period') || 
-              lowerKey.includes('year') ||
-              lowerKey.includes('ref') ||
-              lowerValue.includes('20') // Looking for year like "2023" or "2024"
-            ) {
-              refDate = value;
-              break;
-            }
-          }
-        }
-        
-        // Extract structure type information
-        let structureType = '';
-        if (fieldMap.StructureType && record[fieldMap.StructureType]) {
-          structureType = record[fieldMap.StructureType];
-        } else {
-          // Look for any field that might contain structure type information
-          for (const [key, value] of Object.entries(record)) {
-            const lowerKey = key.toLowerCase();
-            const lowerValue = (value || '').toLowerCase();
-            
-            if (
-              lowerKey.includes('structure') || 
-              lowerKey.includes('building') || 
-              lowerKey.includes('type') && !lowerKey.includes('unit')
-            ) {
-              structureType = value;
-              break;
-            }
-          }
-        }
-        
-        // Calculate data age in months if we have a reference date
-        let dataAge: number | undefined = undefined;
-        let yearFromRefDate: number | undefined = undefined;
-        
-        if (refDate) {
-          // Try to parse the date - handle different formats
-          let refDateObj: Date | null = null;
+      
+      // Process the data
+      const processedData = parsedData.data
+        // Filter out rows without city/location data or value data
+        .filter(record => record[fieldMap.GEO] && record[fieldMap.VALUE])
+        // Filter for Ontario cities
+        .filter(record => {
+          const geo = record[fieldMap.GEO];
+          return geo && (
+            geo.endsWith(', Ontario') || 
+            geo.includes('Ontario') || 
+            geo.includes('ON,') ||
+            geo.includes(', ON')
+          );
+        })
+        // Map to our expected format
+        .map(record => {
+          let bedroomInfo = '';
           
-          // Try YYYY-MM-DD format
-          if (/^\d{4}-\d{1,2}-\d{1,2}$/.test(refDate)) {
-            refDateObj = new Date(refDate);
-            yearFromRefDate = refDateObj.getFullYear();
-          } 
-          // Try YYYY format
-          else if (/^\d{4}$/.test(refDate)) {
-            yearFromRefDate = parseInt(refDate);
-            refDateObj = new Date(yearFromRefDate, 0, 1);
+          // Extract bedroom info from available fields
+          if (fieldMap.Bedrooms && record[fieldMap.Bedrooms]) {
+            bedroomInfo = record[fieldMap.Bedrooms];
+          } else {
+            // Look for any field that might contain bedroom info
+            for (const [key, value] of Object.entries(record)) {
+              const lowerKey = key.toLowerCase();
+              const lowerValue = (value || '').toLowerCase();
+              
+              if (
+                lowerKey.includes('bedroom') || 
+                lowerKey.includes('unit') || 
+                lowerValue.includes('bedroom') || 
+                lowerValue.includes('bachelor')
+              ) {
+                bedroomInfo = value;
+                break;
+              }
+            }
           }
-          // Try to extract year from text (like "Reference period: 2023")
-          else {
-            const yearMatch = refDate.match(/\b(20\d{2})\b/);
-            if (yearMatch) {
-              yearFromRefDate = parseInt(yearMatch[1]);
+          
+          // Extract reference date information
+          let refDate = '';
+          if (fieldMap.RefDate && record[fieldMap.RefDate]) {
+            refDate = record[fieldMap.RefDate];
+          } else {
+            // Look for any field that might contain date information
+            for (const [key, value] of Object.entries(record)) {
+              const lowerKey = key.toLowerCase();
+              const lowerValue = (value || '').toLowerCase();
+              
+              if (
+                lowerKey.includes('date') || 
+                lowerKey.includes('period') || 
+                lowerKey.includes('year') ||
+                lowerKey.includes('ref') ||
+                lowerValue.includes('20') // Looking for year like "2023" or "2024"
+              ) {
+                refDate = value;
+                break;
+              }
+            }
+          }
+          
+          // Extract structure type information
+          let structureType = '';
+          if (fieldMap.StructureType && record[fieldMap.StructureType]) {
+            structureType = record[fieldMap.StructureType];
+          } else {
+            // Look for any field that might contain structure type information
+            for (const [key, value] of Object.entries(record)) {
+              const lowerKey = key.toLowerCase();
+              const lowerValue = (value || '').toLowerCase();
+              
+              if (
+                lowerKey.includes('structure') || 
+                lowerKey.includes('building') || 
+                lowerKey.includes('type') && !lowerKey.includes('unit')
+              ) {
+                structureType = value;
+                break;
+              }
+            }
+          }
+          
+          // Calculate data age in months if we have a reference date
+          let dataAge: number | undefined = undefined;
+          let yearFromRefDate: number | undefined = undefined;
+          
+          if (refDate) {
+            // Try to parse the date - handle different formats
+            let refDateObj: Date | null = null;
+            
+            // Try YYYY-MM-DD format
+            if (/^\d{4}-\d{1,2}-\d{1,2}$/.test(refDate)) {
+              refDateObj = new Date(refDate);
+              yearFromRefDate = refDateObj.getFullYear();
+            } 
+            // Try YYYY format
+            else if (/^\d{4}$/.test(refDate)) {
+              yearFromRefDate = parseInt(refDate);
               refDateObj = new Date(yearFromRefDate, 0, 1);
             }
+            // Try to extract year from text (like "Reference period: 2023")
+            else {
+              const yearMatch = refDate.match(/\b(20\d{2})\b/);
+              if (yearMatch) {
+                yearFromRefDate = parseInt(yearMatch[1]);
+                refDateObj = new Date(yearFromRefDate, 0, 1);
+              }
+            }
+            
+            if (refDateObj && !isNaN(refDateObj.getTime())) {
+              const currentDate = new Date();
+              const monthsDiff = 
+                (currentDate.getFullYear() - refDateObj.getFullYear()) * 12 + 
+                (currentDate.getMonth() - refDateObj.getMonth());
+              dataAge = monthsDiff;
+            }
           }
           
-          if (refDateObj && !isNaN(refDateObj.getTime())) {
-            const currentDate = new Date();
-            const monthsDiff = 
-              (currentDate.getFullYear() - refDateObj.getFullYear()) * 12 + 
-              (currentDate.getMonth() - refDateObj.getMonth());
-            dataAge = monthsDiff;
-          }
-        }
-        
-        // Map structure type to our housing category
-        const category = mapStructureTypeToCategory(structureType);
-        
-        return {
-          GEO: record[fieldMap.GEO],
-          Bedrooms: normalizeBedrooms(bedroomInfo),
-          VALUE: record[fieldMap.VALUE],
-          RefDate: refDate,
-          DataAge: dataAge,
-          Year: yearFromRefDate,
-          StructureType: structureType,
-          Category: category,
-          ...record
-        };
-      })
-      // Filter out records without bedroom info or value
-      .filter(record => record.Bedrooms && record.VALUE);
-    
-    // Find years in the data
-    const years = processedData
-      .filter(r => r.Year !== undefined)
-      .map(r => r.Year as number);
-    
-    const uniqueYears = Array.from(new Set(years)).sort((a, b) => b - a); // Sort descending
-    
-    // Get only records from the most recent year
-    let latestYear = 0;
-    if (uniqueYears.length > 0) {
-      latestYear = uniqueYears[0]; // First item is the most recent year
-    }
-    
-    // Filter for only records from the most recent year
-    const recentRecords = latestYear > 2008 // Only filter if we found years more recent than 2008
-      ? processedData.filter(r => r.Year === latestYear)
-      : processedData;
-    
-    // If we don't have enough recent records, fall back to the full dataset
-    if (recentRecords.length < 10 && processedData.length >= 10) {
-      cachedData = processedData;
-      return processedData;
-    }
+          // Map structure type to our housing category
+          const category = mapStructureTypeToCategory(structureType);
+          
+          return {
+            GEO: record[fieldMap.GEO],
+            Bedrooms: normalizeBedrooms(bedroomInfo),
+            VALUE: record[fieldMap.VALUE],
+            RefDate: refDate,
+            DataAge: dataAge,
+            Year: yearFromRefDate,
+            StructureType: structureType,
+            Category: category,
+            ...record
+          };
+        })
+        // Filter out records without bedroom info or value
+        .filter(record => record.Bedrooms && record.VALUE);
+      
+      // Find years in the data
+      const years = processedData
+        .filter(r => r.Year !== undefined)
+        .map(r => r.Year as number);
+      
+      const uniqueYears = Array.from(new Set(years)).sort((a, b) => b - a); // Sort descending
+      
+      // Get only records from the most recent year
+      let latestYear = 0;
+      if (uniqueYears.length > 0) {
+        latestYear = uniqueYears[0]; // First item is the most recent year
+      }
+      
+      // Filter for only records from the most recent year
+      const recentRecords = latestYear > 2008 // Only filter if we found years more recent than 2008
+        ? processedData.filter(r => r.Year === latestYear)
+        : processedData;
+      
+      // If we don't have enough recent records, fall back to the full dataset
+      if (recentRecords.length < 10 && processedData.length >= 10) {
+        cachedData = processedData;
+        return processedData;
+      }
 
-    cachedData = recentRecords;
-    return recentRecords;
+      cachedData = recentRecords;
+      return recentRecords;
+    } else {
+      throw new Error('Invalid response format from API');
+    }
   } catch (error) {
     console.error('Error fetching rental data:', error);
     return [];
