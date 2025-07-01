@@ -119,7 +119,11 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(
         { data: csvData },
         {
-          headers: { 'Cache-Control': 'max-age=86400' }
+          headers: { 
+            'Cache-Control': 'max-age=86400',
+            'CDN-Cache-Control': 'public, max-age=86400',
+            'Vercel-CDN-Cache-Control': 'public, max-age=86400'
+          }
         }
       );
     } catch (zipError) {

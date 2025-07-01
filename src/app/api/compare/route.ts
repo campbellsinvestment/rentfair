@@ -83,12 +83,17 @@ export async function GET(request: NextRequest) {
     
     console.log('🔴 API-COMPARE: Returning result:', JSON.stringify(result));
     
+    // Set cache headers - 1 hour by default or use environment variable
+    const cacheDuration = process.env.API_CACHE_DURATION || 3600;
+    
     // Return comparison data with caching header
     return NextResponse.json(
       result,
       {
         headers: {
-          'Cache-Control': 's-maxage=86400',
+          'Cache-Control': `public, s-maxage=${cacheDuration}, stale-while-revalidate=${cacheDuration * 2}`,
+          'CDN-Cache-Control': `public, max-age=${cacheDuration}`,
+          'Vercel-CDN-Cache-Control': `public, max-age=${cacheDuration}`
         },
       }
     );
