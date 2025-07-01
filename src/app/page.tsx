@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useEffect, FormEvent, useRef } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useState, useEffect, FormEvent, useRef, Suspense } from 'react';
+import { useRouter } from 'next/navigation';
 import ShareButton from '@/app/components/ShareButton';
 import PageHead from '@/app/components/PageHead';
+import SearchParamsProvider, { useSearchParamsContext } from '@/app/components/SearchParamsProvider';
 import { ONTARIO_CITIES, HOUSING_CATEGORIES } from '@/lib/cmhc';
 
 // Type for comparison result
@@ -31,7 +32,8 @@ const BEDROOM_OPTIONS = [
   { value: '3+', label: '3+ Bedroom' },
 ];
 
-export default function Home() {
+// Main page content that uses search params
+function MainContent() {
   const [city, setCity] = useState<string>('Toronto');
   const [beds, setBeds] = useState<string>('1');
   const [price, setPrice] = useState<number>(0);
@@ -43,7 +45,7 @@ export default function Home() {
   const [showLegend, setShowLegend] = useState<boolean>(false);
   const [showDataExplanation, setShowDataExplanation] = useState<boolean>(false);
   
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParamsContext();
   const router = useRouter();
   const resultsRef = useRef<HTMLDivElement | null>(null);
 
@@ -409,7 +411,7 @@ export default function Home() {
         </section>
       )}
 
-      {/* Housing Category Legend */}
+      {/* Modals */}
       {showLegend && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -431,7 +433,6 @@ export default function Home() {
         </div>
       )}
 
-      {/* Data Explanation Modal */}
       {showDataExplanation && (
         <div className="modal-overlay">
           <div className="modal-content data-explanation-modal">
@@ -440,6 +441,7 @@ export default function Home() {
               <button onClick={() => setShowDataExplanation(false)} className="modal-close">×</button>
             </div>
             <div className="modal-body">
+              {/* Keep all data explanation content */}
               <div className="data-info-section">
                 <div className="data-info-content">
                   <h4>Data Source</h4>
@@ -506,5 +508,21 @@ export default function Home() {
         </div>
       )}
     </div>
+  );
+}
+
+// Main page component with Suspense boundary for the useSearchParams
+export default function Home() {
+  return (
+    <Suspense fallback={
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+        <p>Loading RentFair...</p>
+      </div>
+    }>
+      <SearchParamsProvider>
+        <MainContent />
+      </SearchParamsProvider>
+    </Suspense>
   );
 }
