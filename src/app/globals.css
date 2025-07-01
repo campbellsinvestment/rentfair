@@ -9,6 +9,7 @@
   --danger-color: #ef4444;
   --warning-color: #f59e0b;
   --success-color: #10b981;
+  --neutral-color: #3b82f6; /* New blue color for fair market rate */
   
   /* Text colors */
   --text-dark: #111827;
@@ -144,7 +145,7 @@ label {
 
 select, input[type="number"], input[type="text"] {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1rem;
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   font-size: 1rem;
@@ -155,18 +156,11 @@ select, input[type="number"], input[type="text"] {
   box-shadow: var(--shadow-sm);
 }
 
-select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236b7280'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
-  background-position: right 1rem center;
-  background-repeat: no-repeat;
-  background-size: 1em 1em;
-  padding-right: 2.5rem;
-}
-
 select:focus, input[type="number"]:focus, input[type="text"]:focus {
   border-color: var(--primary-color);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  transform: translateY(-2px);
 }
 
 /* Button styles */
@@ -206,22 +200,40 @@ select:focus, input[type="number"]:focus, input[type="text"]:focus {
 }
 
 .submit-button {
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: var(--text-light);
-  padding: 0.85rem 1.75rem;
+  padding: 1rem 1.75rem;
   border-radius: var(--radius);
   border: none;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
   transition: all var(--transition);
   cursor: pointer;
   width: 100%;
   margin-top: 1rem;
   box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.submit-button:hover:not(:disabled)::before {
+  left: 100%;
 }
 
 .submit-button:hover:not(:disabled) {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -301,9 +313,11 @@ select:focus, input[type="number"]:focus, input[type="text"]:focus {
   padding: 2.5rem;
   box-shadow: var(--shadow-xl);
   margin-bottom: 3rem;
-  border-left: 6px solid transparent;
   background-color: var(--bg-white);
   transition: transform var(--transition);
+  position: relative;
+  overflow: hidden;
+  border-left: 6px solid transparent;
 }
 
 .result-card:hover {
@@ -317,6 +331,18 @@ select:focus, input[type="number"]:focus, input[type="text"]:focus {
   color: var(--text-dark);
 }
 
+.result-card-high {
+  border-left-color: var(--danger-color);
+}
+
+.result-card-low {
+  border-left-color: var(--success-color);
+}
+
+.result-card-average {
+  border-left-color: var(--neutral-color);
+}
+
 .result-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -326,14 +352,18 @@ select:focus, input[type="number"]:focus, input[type="text"]:focus {
 
 .result-item {
   position: relative;
-  padding: 1.25rem;
-  border-radius: var(--radius);
-  background-color: var(--bg-subtle);
-  transition: transform var(--transition);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-white);
+  transition: all var(--transition);
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 4px 8px -1px rgba(0, 0, 0, 0.06), 
+              0 -1px 3px -1px rgba(0, 0, 0, 0.05); /* Added subtle top shadow */
 }
 
 .result-item:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .result-label {
@@ -365,7 +395,7 @@ select:focus, input[type="number"]:focus, input[type="text"]:focus {
 }
 
 .result-card-average {
-  border-left-color: var(--warning-color);
+  border-left-color: var(--neutral-color);
 }
 
 .result-summary {
@@ -386,7 +416,7 @@ select:focus, input[type="number"]:focus, input[type="text"]:focus {
 }
 
 .summary-average {
-  color: var(--warning-color);
+  color: var(--neutral-color);
   font-weight: 500;
 }
 
@@ -414,12 +444,58 @@ select:focus, input[type="number"]:focus, input[type="text"]:focus {
 
 /* Enhanced Results Display */
 .user-rent-display {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 20px;
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
   text-align: center;
-  border-left: 4px solid var(--accent-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 6px 8px -1px rgba(0, 0, 0, 0.06), 
+              0 -1px 3px -1px rgba(0, 0, 0, 0.05); /* Added subtle top shadow */
+  position: relative;
+  overflow: hidden;
+}
+
+.user-rent-display .result-label {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.user-rent-display .result-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+/* Comparison highlight section */
+.comparison-highlight {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 6px 8px -1px rgba(0, 0, 0, 0.06), 
+              0 -1px 3px -1px rgba(0, 0, 0, 0.05); /* Added subtle top shadow */
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.comparison-highlight p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.comparison-highlight .indicator-icon {
+  font-size: 1.5rem;
+  margin-right: 0.25rem;
 }
 
 .pulse-animation {
@@ -436,16 +512,6 @@ select:focus, input[type="number"]:focus, input[type="text"]:focus {
   100% {
     opacity: 1;
   }
-}
-
-.highlight-value {
-  font-size: 1.3rem;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-.highlight-value:hover {
-  transform: scale(1.05);
 }
 
 /* Gauge styling */
@@ -592,20 +658,29 @@ select:focus, input[type="number"]:focus, input[type="text"]:focus {
 .category-item p {
   color: var(--text-muted);
   font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 /* Data age warning */
 .data-age-warning {
-  background-color: rgba(255, 193, 7, 0.2);
-  border-left: 4px solid #ffc107;
-  padding: 10px 15px;
-  margin-bottom: 20px;
-  border-radius: 4px;
+  background-color: rgba(249, 250, 251, 0.95);
+  border: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.06), 
+              0 -1px 2px -1px rgba(0, 0, 0, 0.04); /* Added subtle top shadow */
+  position: relative;
+  overflow: hidden;
 }
 
 .warning-title {
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 0.25rem;
+  color: var(--text-dark);
 }
 
 /* Notification styles */
@@ -823,7 +898,7 @@ footer {
 }
 
 .interpretation-item.fair {
-  border-left: 4px solid var(--warning-color);
+  border-left: 4px solid var( --neutral-color);
 }
 
 .interpretation-item.high {
@@ -845,8 +920,8 @@ footer {
 }
 
 .badge.average {
-  background-color: var(--warning-color);
-  color: var(--text-dark);
+  background-color: var(--neutral-color);
+  color: white;
 }
 
 .badge.above {
@@ -860,15 +935,6 @@ footer {
   font-size: 1.1rem;
   margin-right: 0.25rem;
   opacity: 0.8;
-}
-
-.market-status {
-  display: inline-block;
-  font-size: 0.7rem;
-  opacity: 0.7;
-  text-transform: lowercase;
-  margin-left: 0.5rem;
-  font-weight: normal;
 }
 
 .text-red-600 .market-indicator {

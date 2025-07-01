@@ -273,13 +273,25 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Data age warning banner */}
-          {result.dataAge && result.dataAge > 6 && (
-            <div className="data-age-warning">
-              <p className="warning-title">Data is {result.dataAgeMention}</p>
-              <p>Rental prices may have changed since data collection.</p>
-            </div>
-          )}
+          {/* Comparison highlight - enhanced with icons */}
+          <div className="comparison-highlight">
+            {result.percent > 0.15 ? (
+              <p>
+                <span className="indicator-icon" style={{ color: 'var(--danger-color)' }}>↑</span>
+                Your rent is <strong>{Math.abs((result.percent * 100)).toFixed(1)}% above</strong> average market rates
+              </p>
+            ) : result.percent < -0.15 ? (
+              <p>
+                <span className="indicator-icon" style={{ color: 'var(--success-color)' }}>↓</span>
+                Your rent is <strong>{Math.abs((result.percent * 100)).toFixed(1)}% below</strong> average market rates
+              </p>
+            ) : (
+              <p>
+                <span className="indicator-icon" style={{ color: 'var(--neutral-color)' }}>•</span>
+                Your rent is <strong>close to average</strong> market rates
+              </p>
+            )}
+          </div>
           
           <div className="result-grid">
             <div className="result-item">
@@ -299,7 +311,6 @@ export default function Home() {
                 </span>
                 ${result.delta > 0 ? '+' : ''}
                 {formatMoney(result.delta)}
-                <span className="market-status">{result.delta > 0 ? 'above' : result.delta < 0 ? 'below' : 'at'} market</span>
               </p>
               {result.adjustmentApplied && result.adjustedAverage && (
                 <p className={`result-adjusted ${(price - result.adjustedAverage) > 0 ? 'text-red-600' : 'text-green-600'}`}>
@@ -318,7 +329,6 @@ export default function Home() {
                 </span>
                 {result.percent > 0 ? '+' : ''}
                 {(result.percent * 100).toFixed(1)}%
-                <span className="market-status">{result.percent > 0 ? 'above' : result.percent < 0 ? 'below' : 'at'} market</span>
               </p>
               {result.adjustmentApplied && result.adjustedAverage && (
                 <p className={`result-adjusted ${((price - result.adjustedAverage) / result.adjustedAverage) > 0 ? 'text-red-600' : 'text-green-600'}`}>
@@ -331,7 +341,13 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Remove these summary lines as they're now part of the ShareButton component */}
+          {/* Data age warning banner - moved down */}
+          {result.dataAge && result.dataAge > 6 && (
+            <div className="data-age-warning">
+              <p className="warning-title">Data is {result.dataAgeMention}</p>
+              <p>Reflects average of all existing rental contracts (including long-term tenants paying below-market rates), not just current market listings which are typically higher for new renters.</p>
+            </div>
+          )}
           
           {result.category && (
             <p className="category-info">
@@ -389,7 +405,6 @@ export default function Home() {
             </div>
             <div className="modal-body">
               <div className="data-info-section">
-                <div className="data-info-icon">📊</div>
                 <div className="data-info-content">
                   <h4>Data Source</h4>
                   <p>
@@ -400,7 +415,6 @@ export default function Home() {
               </div>
               
               <div className="data-info-section">
-                <div className="data-info-icon">🗓️</div>
                 <div className="data-info-content">
                   <h4>Collection Method</h4>
                   <p>
@@ -411,7 +425,6 @@ export default function Home() {
               </div>
               
               <div className="data-info-section">
-                <div className="data-info-icon">⏱️</div>
                 <div className="data-info-content">
                   <h4>Data Age & Adjustments</h4>
                   <p>
@@ -422,7 +435,6 @@ export default function Home() {
               </div>
               
               <div className="data-info-section">
-                <div className="data-info-icon">⚠️</div>
                 <div className="data-info-content">
                   <h4>Limitations to Consider</h4>
                   <ul className="data-limitations-list">
@@ -435,7 +447,6 @@ export default function Home() {
               </div>
               
               <div className="data-info-section">
-                <div className="data-info-icon">🎯</div>
                 <div className="data-info-content">
                   <h4>How to Interpret Results</h4>
                   <div className="interpretation-guide">
