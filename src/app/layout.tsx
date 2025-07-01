@@ -17,18 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>
-          <div className="container header-container">
-            <a href="/" className="logo">RentFair</a>
-            <nav className="main-nav">
-              <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#data-info">Data Info</a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
         
         <main className="main-content">
           <div className="container">

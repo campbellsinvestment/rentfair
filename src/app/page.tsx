@@ -235,7 +235,16 @@ export default function Home() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="category">Housing Category</label>
+            <label htmlFor="category">
+              Housing Category
+              <button 
+                type="button" 
+                className="info-button"
+                onClick={() => setShowLegend(!showLegend)}
+              >
+                ?
+              </button>
+            </label>
             <select
               id="category"
               value={category}
@@ -248,13 +257,6 @@ export default function Home() {
                 </option>
               ))}
             </select>
-            <button 
-              type="button" 
-              className="info-button"
-              onClick={() => setShowLegend(!showLegend)}
-            >
-              ?
-            </button>
           </div>
 
           <button
