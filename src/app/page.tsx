@@ -3,6 +3,7 @@
 import { useState, useEffect, FormEvent, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import ShareButton from '@/app/components/ShareButton';
+import PageHead from '@/app/components/PageHead';
 import { ONTARIO_CITIES, HOUSING_CATEGORIES } from '@/lib/cmhc';
 
 // Type for comparison result
@@ -163,15 +164,20 @@ export default function Home() {
 
   return (
     <div className="home-container">
+      <PageHead 
+        city={city}
+        averageRent={result?.average}
+        dataAge={result?.dataAgeMention}
+      />
       
       <section className="hero-section">
-        <h1>RentFair</h1>
-        <p className="tagline">
+        <h1 itemProp="name">RentFair</h1>
+        <p className="tagline" itemProp="description">
           Compare your rent to average market rates in Ontario
         </p>
         <div className="data-certification-badge">
           <div className="data-badge-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M21 8V20.9932C21 21.5501 20.5552 22 20.0066 22H3.9934C3.44495 22 3 21.556 3 21.0082V2.9918C3 2.45531 3.4487 2 4.00221 2H14.9968L21 8Z" stroke="currentColor" strokeWidth="2"/>
               <path d="M14 2V6.99767C14 7.55097 14.4423 8 14.9914 8H21" stroke="currentColor" strokeWidth="2"/>
               <path d="M7.5 15.5L10.5 18.5L16.5 11.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

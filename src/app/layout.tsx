@@ -1,12 +1,57 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'RentFair - Ontario Rent Comparison',
-  description: 'Compare your Ontario apartment rent to current market rates and see if you\'re getting a fair deal.',
+  title: 'RentFair - Ontario Rent Comparison Tool | Compare Your Rent to Market Averages',
+  description: 'Use RentFair to compare your Ontario apartment rent with official Statistics Canada market rates. See if your rent is above or below average in cities like Toronto, Ottawa, Hamilton, London and more.',
+  keywords: 'rent comparison, Ontario rent, fair rent, apartment prices, rental market, CMHC data, Toronto rent, Ottawa rent, housing costs, Statistics Canada rental data',
+  authors: [{ name: 'RentFair' }],
+  creator: 'RentFair',
+  publisher: 'RentFair',
+  applicationName: 'RentFair',
+  alternates: {
+    canonical: 'https://rentfair.ca',
+  },
+  category: 'Housing',
+  openGraph: {
+    title: 'RentFair - Compare Your Ontario Apartment Rent to Market Averages',
+    description: 'Discover if you\'re paying too much for rent in Ontario with official Statistics Canada market data. Compare your apartment rent to city averages across Toronto, Ottawa and all Ontario cities.',
+    url: 'https://rentfair.ca',
+    siteName: 'RentFair',
+    locale: 'en_CA',
+    type: 'website',
+    images: [{
+      url: '/og-image.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'RentFair - Ontario Rent Comparison Tool'
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'RentFair - Compare Your Ontario Rent to Market Averages',
+    description: 'Check if your Ontario rent is above or below market average with official Statistics Canada data.',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'google-site-verification-code', // Add actual code when available
+  },
+  metadataBase: new URL('https://rentfair.ca'), // Change to actual domain when available
 }
 
 export default function RootLayout({
@@ -16,6 +61,65 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script id="schema-org-data" type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "RentFair",
+              "url": "https://rentfair.ca",
+              "description": "A tool to compare your Ontario apartment rent with official Statistics Canada market rates",
+              "applicationCategory": "UtilityApplication",
+              "operatingSystem": "All",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "CAD"
+              },
+              "audience": {
+                "@type": "Audience",
+                "name": "Ontario Renters",
+                "audienceType": "Renters, Apartment Tenants, Housing Market Researchers"
+              },
+              "provider": {
+                "@type": "Organization",
+                "name": "RentFair",
+                "description": "Provider of rent comparison tools using official government data"
+              },
+              "about": {
+                "@type": "Thing",
+                "name": "Rental Market Data",
+                "description": "Ontario apartment rental market rates from Statistics Canada"
+              }
+            }
+          `}
+        </Script>
+        <Script id="local-business-data" type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Dataset",
+              "name": "Ontario Rental Market Data",
+              "description": "Rental market data for Ontario cities sourced from Statistics Canada and CMHC",
+              "keywords": ["Ontario", "rent", "apartment", "housing", "CMHC", "Statistics Canada", "rental market"],
+              "creator": {
+                "@type": "Organization",
+                "name": "Statistics Canada"
+              },
+              "distribution": {
+                "@type": "DataDownload",
+                "contentUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410013301"
+              },
+              "temporalCoverage": "2023-2025",
+              "spatialCoverage": {
+                "@type": "Place",
+                "name": "Ontario, Canada"
+              }
+            }
+          `}
+        </Script>
+      </head>
       <body className={inter.className}>
         
         <main className="main-content">
