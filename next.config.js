@@ -3,9 +3,6 @@ const nextConfig = {
   images: {
     domains: ['www150.statcan.gc.ca'],
   },
-  experimental: {
-    appDir: true,
-  },
 };
 
 module.exports = nextConfig;
