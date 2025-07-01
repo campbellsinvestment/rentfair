@@ -63,6 +63,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" type="image/svg+xml" href="/logo/rentfair-favicon.svg" />
+        <Script defer data-domain="rentfairontario.vercel.app" src="https://plausible.io/js/script.js" />
         <Script id="schema-org-data" type="application/ld+json">
           {`
             {
