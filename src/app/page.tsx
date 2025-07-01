@@ -184,7 +184,12 @@ function MainContent() {
       />
       
       <section className="hero-section">
-        <h1 itemProp="name">RentFair</h1>
+        <h1 itemProp="name">
+          <span className="logo-with-icon">
+            <img src="/logo/rentfair-icon.svg" alt="" className="title-icon" />
+            Rent Fair
+          </span>
+        </h1>
         <p className="tagline" itemProp="description">
           Compare your rent to average market rates in Ontario
         </p>

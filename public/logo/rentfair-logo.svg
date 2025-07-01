@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="60px" viewBox="0 0 200 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4f46e5" />
+            <stop offset="100%" stop-color="#06b6d4" />
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+            <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.3" />
+        </filter>
+    </defs>
+
+    <!-- House/Building Icon -->
+    <g filter="url(#shadow)">
+        <path d="M28,10 L48,24 L48,50 L8,50 L8,24 L28,10 Z" fill="white" stroke="url(#logoGradient)" stroke-width="2" />
+        <path d="M28,14 L42,24 L42,46 L14,46 L14,24 L28,14 Z" fill="url(#logoGradient)" opacity="0.1" />
+        
+        <!-- Equity/Balance Symbol -->
+        <rect x="22" y="30" width="12" height="2" rx="1" fill="url(#logoGradient)" />
+        <rect x="18" y="35" width="20" height="2" rx="1" fill="url(#logoGradient)" />
+        <rect x="20" y="40" width="16" height="2" rx="1" fill="url(#logoGradient)" />
+    </g>
+
+    <!-- Text -->
+    <text x="60" y="32" font-family="'Inter', -apple-system, sans-serif" font-size="20" font-weight="700" letter-spacing="-0.5" fill="#111827">
+        <tspan fill="#4f46e5">Rent</tspan><tspan fill="#06b6d4">Fair</tspan>
+    </text>
+    <text x="60" y="44" font-family="'Inter', -apple-system, sans-serif" font-size="10" font-weight="500" letter-spacing="0" fill="#6b7280">
+        fair market rent comparison
+    </text>
+</svg>

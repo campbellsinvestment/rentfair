@@ -62,6 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" type="image/svg+xml" href="/logo/rentfair-favicon.svg" />
         <Script id="schema-org-data" type="application/ld+json">
           {`
             {

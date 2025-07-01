@@ -96,6 +96,71 @@ button {
   padding: 0 1.5rem;
 }
 
+/* Header styles */
+.site-header {
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-link {
+  display: block;
+  transition: opacity var(--transition);
+}
+
+.logo-link:hover {
+  opacity: 0.9;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+/* Logo with icon styles */
+.logo-with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  line-height: 1;
+}
+
+.title-icon {
+  width: 49px;
+  height: 49px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  top: -2px; /* Fine-tune vertical alignment */
+}
+
 /* Form styles */
 .form-section {
   background-color: var(--bg-white);
@@ -450,28 +515,7 @@ select:focus, input[type="number"]:focus, input[type="text"]:focus {
   margin-bottom: 1.5rem;
   text-align: center;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-              0 6px 8px -1px rgba(0, 0, 0, 0.06), 
-              0 -1px 3px -1px rgba(0, 0, 0, 0.05); /* Added subtle top shadow */
-  position: relative;
-  overflow: hidden;
-}
-
-.user-rent-display .result-label {
-  font-size: 1rem;
-  margin-bottom: 0.75rem;
-}
-
-.user-rent-display .result-value {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--text-dark);
-  letter-spacing: -0.025em;
-  line-height: 1;
-}
-
-/* Comparison highlight section */
-.comparison-highlight {
-  background-color: var(--bg-white);
+              0 6px 8px -1px rgba(0, 0, 0, 0.06);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
   margin-bottom: 2rem;
