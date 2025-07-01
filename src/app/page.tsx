@@ -278,17 +278,17 @@ export default function Home() {
             {result.percent > 0.15 ? (
               <p>
                 <span className="indicator-icon" style={{ color: 'var(--danger-color)' }}>↑</span>
-                Your rent is <strong>{Math.abs((result.percent * 100)).toFixed(1)}% above</strong> average market rates
+                Your rent is <strong style={{ color: 'var(--danger-color)' }}>{Math.abs((result.percent * 100)).toFixed(1)}% above</strong> average market rates
               </p>
             ) : result.percent < -0.15 ? (
               <p>
                 <span className="indicator-icon" style={{ color: 'var(--success-color)' }}>↓</span>
-                Your rent is <strong>{Math.abs((result.percent * 100)).toFixed(1)}% below</strong> average market rates
+                Your rent is <strong style={{ color: 'var(--success-color)' }}>{Math.abs((result.percent * 100)).toFixed(1)}% below</strong> average market rates
               </p>
             ) : (
               <p>
                 <span className="indicator-icon" style={{ color: 'var(--neutral-color)' }}>•</span>
-                Your rent is <strong>close to average</strong> market rates
+                Your rent is <strong style={{ color: 'var(--neutral-color)' }}>close to average</strong> market rates
               </p>
             )}
           </div>
