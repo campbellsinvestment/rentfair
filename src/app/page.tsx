@@ -1,8 +1,7 @@
 'use client';
 
-import { useState, useEffect, FormEvent } from 'react';
+import { useState, useEffect, FormEvent, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { toast, Toaster } from 'react-hot-toast';
 import ShareButton from '@/app/components/ShareButton';
 import { ONTARIO_CITIES, HOUSING_CATEGORIES } from '@/lib/cmhc';
 
@@ -42,10 +41,10 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [showLegend, setShowLegend] = useState<boolean>(false);
   const [showDataExplanation, setShowDataExplanation] = useState<boolean>(false);
-  const [notificationVisible, setNotificationVisible] = useState<boolean>(false);
-
+  
   const searchParams = useSearchParams();
   const router = useRouter();
+  const resultsRef = useRef<HTMLDivElement | null>(null);
 
   // Run comparison when query params exist on load
   useEffect(() => {
@@ -90,8 +89,6 @@ export default function Home() {
     setLoading(true);
     setError(null);
     try {
-      console.log('🔍 DEBUG-FRONTEND: Starting comparison for:', { city: cityVal, beds: bedsVal, price: priceVal, category: categoryVal });
-      
       // Create a controller to abort the request if it takes too long
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 seconds timeout
@@ -103,33 +100,24 @@ export default function Home() {
       
       // Clear the timeout as we got a response
       clearTimeout(timeoutId);
-
-      console.log('🔍 DEBUG-FRONTEND: API response status:', response.status, response.statusText);
       
       if (!response.ok) {
         let errorMessage = `Error ${response.status}: ${response.statusText}`;
         
         try {
           const errorData = await response.json();
-          console.error('🔍 DEBUG-FRONTEND: Error response from API:', errorData);
           if (errorData.error) {
             errorMessage = errorData.error;
           }
         } catch (jsonError) {
-          console.error('🔍 DEBUG-FRONTEND: Failed to parse error response as JSON');
+          // Failed to parse error response as JSON
         }
         
         throw new Error(errorMessage);
       }
 
       const data = await response.json();
-      console.log('🔍 DEBUG-FRONTEND: Success! Received comparison data:', data);
       setResult(data);
-      
-      // Show success notification
-      toast.success('Comparison completed successfully!');
-      setNotificationVisible(true);
-      setTimeout(() => setNotificationVisible(false), 5000);
       
       // Update URL with query parameters
       const params = new URLSearchParams();
@@ -141,16 +129,12 @@ export default function Home() {
       }
       router.push(`?${params.toString()}`);
     } catch (err) {
-      console.error('🔍 DEBUG-FRONTEND: Error during comparison:', err);
-      
       const error = err as { name?: string; message?: string };
       
       if (error.name === 'AbortError') {
         setError('Request timed out. The server might be busy or experiencing issues.');
-        toast.error('Request timed out. Please try again later.');
       } else {
         setError(error.message || 'An unknown error occurred');
-        toast.error(error.message || 'An unknown error occurred');
       }
     } finally {
       setLoading(false);
@@ -170,18 +154,15 @@ export default function Home() {
     return 'result-card-average';
   };
 
+  // Scroll to results section when it appears
+  useEffect(() => {
+    if (result && resultsRef.current) {
+      resultsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [result]);
+
   return (
     <div className="home-container">
-      <Toaster position="top-right" />
-      
-      {notificationVisible && (
-        <div className="notification">
-          <div className="notification-content">
-            <span>Comparison completed successfully!</span>
-            <button onClick={() => setNotificationVisible(false)}>×</button>
-          </div>
-        </div>
-      )}
       
       <section className="hero-section">
         <h1>RentFair</h1>
@@ -281,7 +262,7 @@ export default function Home() {
       )}
 
       {result && (
-        <section className={`result-card ${getResultCardClass()}`}>
+        <section className={`result-card ${getResultCardClass()}`} ref={resultsRef}>
           <h2>Results</h2>
           
           {/* User's inputted rent - prominently displayed */}
