@@ -1,0 +1,6798 @@
+{
+  "metadata": {
+    "generatedAt": "2025-07-01T17:44:20.834Z",
+    "recordCount": 677,
+    "dataYear": 2024,
+    "uniqueBedroomTypes": [
+      "0",
+      "1",
+      "2",
+      "3+"
+    ],
+    "uniqueCities": 61,
+    "uniqueStructureTypes": [
+      "Row and apartment structures of three units and over",
+      "Row structures of three units and over",
+      "Apartment structures of three units and over",
+      "Apartment structures of six units and over"
+    ],
+    "uniqueCategories": [
+      "Multi-Plex",
+      "Townhouse",
+      "Low-Rise",
+      "Highrise"
+    ]
+  },
+  "data": [
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "983",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1284",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1350",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "1332",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "900",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "1022",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "983",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1284",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1353",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "1347",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "986",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1314",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1402",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Quebec part, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "1433",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Hawkesbury, Quebec part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1078",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Hawkesbury, Quebec part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1007",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Hawkesbury, Quebec part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1078",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Hawkesbury, Quebec part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1007",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Hawkesbury, Quebec part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1214",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Hawkesbury, Quebec part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1150",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1037",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1559",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1703",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1838",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1650",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1840",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1037",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1560",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1706",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1836",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1038",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1593",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1718",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Barrie, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1889",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Bracebridge, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1200",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Bracebridge, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1429",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Bracebridge, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1200",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Bracebridge, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1429",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Bracebridge, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1223",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Bracebridge, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1443",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1084",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1353",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1442",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1481",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1496",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1582",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1084",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1353",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1438",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1405",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1084",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1370",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1515",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Brantford, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1596",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Brighton, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1220",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Brighton, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1220",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Brock, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1069",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Brock, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1050",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Brock, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1069",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Brock, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1050",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Brock, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1069",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Brock, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1050",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Brockville, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "903",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Brockville, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1010",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Brockville, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1235",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Brockville, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1144",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Brockville, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "903",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Brockville, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1009",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Brockville, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1231",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Brockville, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1153",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Brockville, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1031",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Brockville, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1234",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Brockville, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1187",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Centre Wellington, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1172",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Centre Wellington, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1442",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Centre Wellington, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1419",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Centre Wellington, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1172",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Centre Wellington, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1442",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Centre Wellington, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1419",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Centre Wellington, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1296",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Centre Wellington, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1479",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Centre Wellington, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1419",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "943",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1119",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1245",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "990",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "946",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1074",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "979",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1120",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1266",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "980",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "979",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1149",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Chatham-Kent, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1286",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Cobourg, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1297",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Cobourg, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1531",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Cobourg, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1726",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Cobourg, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1019",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Cobourg, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1359",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Cobourg, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1542",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Cobourg, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1726",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Cobourg, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1019",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Cobourg, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1359",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Cobourg, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1596",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Cobourg, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1726",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Collingwood, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1309",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Collingwood, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1539",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Collingwood, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1309",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Collingwood, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1539",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Collingwood, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1415",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Collingwood, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1532",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "873",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "920",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1140",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1156",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1064",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "873",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "916",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1142",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1168",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "969",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1030",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1195",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Cornwall, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1610",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Elliot Lake, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "728",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Elliot Lake, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "805",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Elliot Lake, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "880",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Elliot Lake, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "878",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Elliot Lake, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "857",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Elliot Lake, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "728",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Elliot Lake, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "804",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Elliot Lake, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "915",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Elliot Lake, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "728",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Elliot Lake, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "804",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Elliot Lake, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "915",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Essex, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Gravenhurst, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1048",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Gravenhurst, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1340",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Gravenhurst, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1048",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Gravenhurst, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1340",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Gravenhurst, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1048",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Gravenhurst, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1340",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Greater Napanee, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1022",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Greater Napanee, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1296",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Greater Napanee, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1022",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Greater Napanee, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1264",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Greater Napanee, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "920",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Greater Napanee, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1270",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "869",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1137",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1446",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1673",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1126",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1256",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1528",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "869",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1137",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1462",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1840",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "941",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1235",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1487",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Greater Sudbury, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1843",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1269",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1598",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1736",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1935",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1624",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1935",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1271",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1598",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1740",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1935",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1323",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1603",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1741",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Guelph, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1966",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Haldimand County, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1529",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Haldimand County, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1471",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Haldimand County, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1529",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Haldimand County, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1471",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Haldimand County, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1529",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1035",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1413",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1636",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1851",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1418",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1736",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1686",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1034",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1413",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1632",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1938",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1115",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1420",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1639",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Hamilton, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1933",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "682",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "722",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "915",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "1553",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "687",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "885",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "1004",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "684",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "724",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "916",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "1725",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "709",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Hawkesbury, Ontario part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1013",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Huntsville, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1294",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Huntsville, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1405",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Huntsville, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1294",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Huntsville, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1403",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Huntsville, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1338",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Huntsville, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1428",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ingersoll, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1097",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ingersoll, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1110",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ingersoll, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1080",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Ingersoll, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1107",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ingersoll, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1130",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ingersoll, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1107",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ingersoll, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1130",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kawartha Lakes, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "812",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kawartha Lakes, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1236",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kawartha Lakes, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1485",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kawartha Lakes, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "812",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kawartha Lakes, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1236",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kawartha Lakes, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1468",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kawartha Lakes, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "792",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kawartha Lakes, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1233",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kawartha Lakes, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1555",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kenora, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "968",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kenora, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1190",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kenora, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "968",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kenora, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1190",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kenora, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1007",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kincardine, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1254",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kincardine, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1254",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kings Subdivision, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1071",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kings Subdivision, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1063",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kings Subdivision, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "914",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kingston, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1058",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kingston, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1406",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kingston, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1674",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kingston, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "2305",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kingston, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1985",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Kingston, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1064",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kingston, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1406",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kingston, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1676",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kingston, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1071",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kingston, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1420",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kingston, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1698",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kingston, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1827",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1250",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1499",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1747",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1789",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1533",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1442",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1577",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1270",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1498",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1766",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1913",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1270",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1499",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1768",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Kitchener-Cambridge-Waterloo, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1926",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Lambton Shores, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1314",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Lambton Shores, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1314",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Lambton Shores, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1314",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Leamington, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1024",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1299",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1541",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1750",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1413",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1695",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1024",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1299",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1548",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1863",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1048",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1309",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1569",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "London, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1844",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Meaford, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1053",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Meaford, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1363",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Meaford, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1070",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Meaford, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1460",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Meaford, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1101",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Meaford, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1569",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Midland, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1243",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Midland, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1477",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Midland, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1243",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Midland, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1477",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Midland, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1296",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Midland, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1510",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Mississippi Mills, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Norfolk, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "718",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Norfolk, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1035",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Norfolk, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "962",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Norfolk, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "718",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Norfolk, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1035",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Norfolk, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "966",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Norfolk, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "718",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Norfolk, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1066",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Norfolk, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1000",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "North Bay, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "709",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "North Bay, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1006",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "North Bay, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1325",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "North Bay, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1406",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "North Bay, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1257",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "North Bay, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "709",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "North Bay, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1006",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "North Bay, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1337",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "North Bay, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "730",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "North Bay, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1085",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "North Bay, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1422",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "North Bay, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1473",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "North Grenville, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "North Perth, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1124",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "North Perth, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1330",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "North Perth, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1228",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "North Perth, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1290",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "North Perth, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1124",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "North Perth, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1330",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "North Perth, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1206",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "North Perth, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1290",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "North Perth, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1124",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "North Perth, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1330",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "North Perth, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1365",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "North Perth, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1290",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Orillia, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "990",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Orillia, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1396",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Orillia, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1372",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Orillia, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1660",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Orillia, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "990",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Orillia, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1396",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Orillia, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1372",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Orillia, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1835",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Orillia, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1115",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Orillia, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1423",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Orillia, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1439",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Orillia, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1829",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1286",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1597",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1690",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1998",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1950",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "2193",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1286",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1601",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1686",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1865",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1345",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1619",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1701",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Oshawa, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1872",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "1232",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1481",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1684",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "1758",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "1330",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1222",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1604",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "1844",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "1231",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1483",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1687",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "1700",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "1232",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1498",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1732",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "1808",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "1253",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1520",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1869",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "2002",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "1330",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1224",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1650",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "1881",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "1253",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1522",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1880",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "2191",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "0",
+      "VALUE": "1254",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "1",
+      "VALUE": "1533",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "2",
+      "VALUE": "1885",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+      "Bedrooms": "3+",
+      "VALUE": "2235",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Owen Sound, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "876",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Owen Sound, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1075",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Owen Sound, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1214",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Owen Sound, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1275",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Owen Sound, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "880",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Owen Sound, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1075",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Owen Sound, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1213",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Owen Sound, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1275",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Owen Sound, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "881",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Owen Sound, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1115",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Owen Sound, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1250",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Owen Sound, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1258",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Pembroke, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "798",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Pembroke, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1033",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Pembroke, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1248",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Pembroke, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "798",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Pembroke, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1033",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Pembroke, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1243",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Pembroke, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "798",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Pembroke, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "996",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Pembroke, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1234",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Pembroke, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "2039",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Petawawa, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "859",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Petawawa, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1156",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Petawawa, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "859",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Petawawa, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1156",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Petawawa, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "857",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Petawawa, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1161",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "956",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1207",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1498",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1657",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "900",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1090",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1567",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "956",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1217",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1506",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1744",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "975",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1240",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1514",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Peterborough, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1732",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Port Hope, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1509",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Port Hope, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1498",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Port Hope, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1764",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Port Hope, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1509",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Port Hope, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1498",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Port Hope, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1764",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Port Hope, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1509",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Port Hope, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1498",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Port Hope, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1764",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Prince Edward, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1113",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Prince Edward, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1263",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Prince Edward, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1073",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Prince Edward, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1243",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Prince Edward, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1030",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Prince Edward, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1243",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "988",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1243",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1475",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1511",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1468",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "988",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1251",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1474",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1527",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1056",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1290",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1512",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "St. Catharines-Niagara, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1712",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "975",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1192",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1473",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1624",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1044",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1370",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1522",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "975",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1197",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1488",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1800",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1073",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1219",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1499",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Sarnia, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1816",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Saugeen Shores, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1253",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Saugeen Shores, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1708",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Saugeen Shores, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1599",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Saugeen Shores, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1253",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Saugeen Shores, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1682",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Saugeen Shores, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1599",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Saugeen Shores, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1189",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Saugeen Shores, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1650",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Saugeen Shores, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1599",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "785",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1066",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1275",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1398",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1785",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1774",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "785",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1066",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1242",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1097",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "827",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1109",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1266",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Sault Ste. Marie, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1231",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Scugog, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1078",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Scugog, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1327",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Scugog, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1078",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Scugog, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1327",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Stratford, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "931",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Stratford, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1464",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Stratford, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1591",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Stratford, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1699",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Stratford, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "931",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Stratford, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1464",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Stratford, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1592",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Stratford, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1705",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Stratford, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1018",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Stratford, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1502",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Stratford, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1615",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Stratford, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1703",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Temiskaming Shores, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "0",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "840",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1144",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1438",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1822",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1340",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1761",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "840",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1146",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1443",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1895",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "857",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1182",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1478",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Thunder Bay, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1929",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Tillsonburg, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "909",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Tillsonburg, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1059",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Tillsonburg, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1258",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Tillsonburg, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "909",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Tillsonburg, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1059",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Tillsonburg, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1258",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Tillsonburg, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1021",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Tillsonburg, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1136",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Tillsonburg, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1279",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "934",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1045",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1213",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1350",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1096",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "934",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1051",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1230",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1311",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "997",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1099",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1282",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Timmins, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1347",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1448",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1715",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1972",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "2185",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1755",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1990",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1448",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1715",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1974",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "2225",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "1448",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1714",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1979",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Toronto, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "2221",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "West Nipissing, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "646",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "West Nipissing, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "892",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "West Nipissing, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1049",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "West Nipissing, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "646",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "West Nipissing, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "892",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "West Nipissing, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "981",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "West Nipissing, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "807",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "West Nipissing, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "906",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "900",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1116",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1376",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1253",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1153",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1232",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "899",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1116",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1387",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1267",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "0",
+      "VALUE": "919",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1129",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1440",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Windsor, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1295",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Woodstock, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1385",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Woodstock, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1530",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Woodstock, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1414",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row and apartment structures of three units and over",
+      "Category": "Multi-Plex"
+    },
+    {
+      "GEO": "Woodstock, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1052",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Woodstock, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1073",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Row structures of three units and over",
+      "Category": "Townhouse"
+    },
+    {
+      "GEO": "Woodstock, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1385",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Woodstock, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1577",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Woodstock, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "1758",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of three units and over",
+      "Category": "Low-Rise"
+    },
+    {
+      "GEO": "Woodstock, Ontario",
+      "Bedrooms": "1",
+      "VALUE": "1425",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Woodstock, Ontario",
+      "Bedrooms": "2",
+      "VALUE": "1608",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    },
+    {
+      "GEO": "Woodstock, Ontario",
+      "Bedrooms": "3+",
+      "VALUE": "2270",
+      "RefDate": "2024",
+      "DataAge": 18,
+      "Year": 2024,
+      "StructureType": "Apartment structures of six units and over",
+      "Category": "Highrise"
+    }
+  ]
+}

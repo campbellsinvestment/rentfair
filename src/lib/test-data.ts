@@ -83,7 +83,7 @@ async function testRentalData() {
       console.log('\nTesting specific city/bedroom combinations:');
       for (const test of testCases) {
         const avg = await getAverage(test.city, test.beds);
-        console.log(`${test.city}, ${test.beds} bedroom: ${avg !== null ? '$' + avg.toFixed(2) : 'No data'}`);
+        console.log(`${test.city}, ${test.beds} bedroom: ${avg && avg.value !== null ? '$' + avg.value.toFixed(2) : 'No data'}`);
       }
     } else {
       console.error('No data was returned');

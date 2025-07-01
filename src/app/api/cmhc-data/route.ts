@@ -1,11 +1,15 @@
 // filepath: /Users/stepocampbell/Documents/GitHub/rentfair/src/app/api/cmhc-data/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import JSZip from 'jszip';
+import { checkForDataUpdates } from '@/lib/data-refresh-scheduler';
 
 // Cache for the processed data (24 hours)
 let cachedData: any = null;
 let cacheTime: number = 0;
 const CACHE_DURATION = 24 * 60 * 60 * 1000; 
+
+// Flag to prevent multiple simultaneous update checks
+let isCheckingForUpdates = false;
 
 /**
  * API endpoint for retrieving CMHC rental market data
@@ -13,6 +17,28 @@ const CACHE_DURATION = 24 * 60 * 60 * 1000;
  */
 export async function GET(request: NextRequest) {
   try {
+    // Check for data updates if we're not already doing so (non-blocking)
+    if (!isCheckingForUpdates) {
+      isCheckingForUpdates = true;
+      
+      // Run update check in the background without awaiting it
+      checkForDataUpdates()
+        .then(wasUpdated => {
+          if (wasUpdated) {
+            // If data was updated, clear our API cache as well
+            cachedData = null;
+            cacheTime = 0;
+            console.log('🔄 CMHC API: Static data was updated, cache cleared');
+          }
+        })
+        .catch(error => {
+          console.error('🔄 CMHC API: Error checking for updates:', error);
+        })
+        .finally(() => {
+          isCheckingForUpdates = false;
+        });
+    }
+
     // Return cached data if available and valid
     const now = Date.now();
     if (cachedData && (now - cacheTime < CACHE_DURATION)) {

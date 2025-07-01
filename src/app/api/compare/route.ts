@@ -9,8 +9,9 @@ export async function GET(request: NextRequest) {
   const city = searchParams.get('city');
   const beds = searchParams.get('beds');
   const priceStr = searchParams.get('price');
+  const category = searchParams.get('category') || '';
   
-  console.log(`🔴 API-COMPARE: Parameters - city: ${city}, beds: ${beds}, price: ${priceStr}`);
+  console.log(`🔴 API-COMPARE: Parameters - city: ${city}, beds: ${beds}, price: ${priceStr}, category: ${category}`);
 
   // Validate parameters
   if (!city || !beds || !priceStr) {
@@ -32,10 +33,10 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    console.log(`🔴 API-COMPARE: Calling getAverage for ${city}, ${beds}`);
+    console.log(`🔴 API-COMPARE: Calling getAverage for ${city}, ${beds}${category ? ', ' + category : ''}`);
     
-    // Get average rent for the specified city and bedroom count
-    const averageResult = await getAverage(city, beds);
+    // Get average rent for the specified city, bedroom count, and category (if provided)
+    const averageResult = await getAverage(city, beds, category || undefined);
     console.log('🔴 API-COMPARE: getAverage returned:', JSON.stringify(averageResult));
     
     if (averageResult.value === null) {
@@ -77,6 +78,7 @@ export async function GET(request: NextRequest) {
       dataAgeMention,
       adjustedAverage: adjustmentApplied ? adjustedAverage : undefined,
       adjustmentApplied,
+      category: category || undefined, // Include the selected category in the response
     };
     
     console.log('🔴 API-COMPARE: Returning result:', JSON.stringify(result));

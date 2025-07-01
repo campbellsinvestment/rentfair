@@ -3,8 +3,8 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { toast, Toaster } from 'react-hot-toast';
-import ShareButton from './components/ShareButton';
-import { ONTARIO_CITIES } from '@/lib/cmhc';
+import ShareButton from '@/app/components/ShareButton';  // Fixed import path
+import { ONTARIO_CITIES, HOUSING_CATEGORIES } from '@/lib/cmhc';
 
 // Type for comparison result
 interface ComparisonResult {
@@ -15,6 +15,7 @@ interface ComparisonResult {
   dataAgeMention: string;
   adjustedAverage?: number;
   adjustmentApplied: boolean;
+  category?: string;
 }
 
 // Bedroom options
@@ -29,9 +30,12 @@ export default function Home() {
   const [city, setCity] = useState<string>('Toronto');
   const [beds, setBeds] = useState<string>('1');
   const [price, setPrice] = useState<number>(0);
+  const [category, setCategory] = useState<string>('');
+  const [availableCategories, setAvailableCategories] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [result, setResult] = useState<ComparisonResult | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [showLegend, setShowLegend] = useState<boolean>(false); // For housing categories info
 
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -41,33 +45,81 @@ export default function Home() {
     const cityParam = searchParams.get('city');
     const bedsParam = searchParams.get('beds');
     const priceParam = searchParams.get('price');
+    const categoryParam = searchParams.get('category');
 
     if (cityParam && bedsParam && priceParam) {
       setCity(cityParam);
       setBeds(bedsParam);
       setPrice(Number(priceParam));
-      compareRent(cityParam, bedsParam, Number(priceParam));
+      if (categoryParam) {
+        setCategory(categoryParam);
+      }
+      // Fixed: Handle null with optional chaining or passing undefined
+      compareRent(cityParam, bedsParam, Number(priceParam), categoryParam || undefined);
     }
   }, [searchParams]);
 
-  const compareRent = async (cityVal: string, bedsVal: string, priceVal: number) => {
+  // Fetch available categories when city or beds change
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch(`/api/test-cities?city=${encodeURIComponent(city)}&beds=${encodeURIComponent(beds)}`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.categories && Array.isArray(data.categories)) {
+            setAvailableCategories(data.categories);
+          }
+        }
+      } catch (err) {
+        console.error('Error fetching categories:', err);
+      }
+    };
+
+    if (city && beds) {
+      fetchCategories();
+    }
+  }, [city, beds]);
+
+  const compareRent = async (cityVal: string, bedsVal: string, priceVal: number, categoryVal?: string) => {
     setLoading(true);
     setError(null);
     try {
-      console.log('🔍 DEBUG-FRONTEND: Starting comparison for:', { city: cityVal, beds: bedsVal, price: priceVal });
+      console.log('🔍 DEBUG-FRONTEND: Starting comparison for:', { city: cityVal, beds: bedsVal, price: priceVal, category: categoryVal });
+      
+      // Create a controller to abort the request if it takes too long
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 seconds timeout
       
       const response = await fetch(
-        `/api/compare?city=${encodeURIComponent(cityVal)}&beds=${encodeURIComponent(bedsVal)}&price=${priceVal}`
+        `/api/compare?city=${encodeURIComponent(cityVal)}&beds=${encodeURIComponent(bedsVal)}&price=${priceVal}` + (categoryVal ? `&category=${encodeURIComponent(categoryVal)}` : ''),
+        { signal: controller.signal }
       );
+      
+      // Clear the timeout as we got a response
+      clearTimeout(timeoutId);
 
       console.log('🔍 DEBUG-FRONTEND: API response status:', response.status, response.statusText);
       
+      // For non-OK responses, handle more carefully
       if (!response.ok) {
-        const errorData = await response.json();
-        console.error('🔍 DEBUG-FRONTEND: Error response from API:', errorData);
-        throw new Error(errorData.error || 'Failed to fetch comparison data');
+        let errorMessage = `Error ${response.status}: ${response.statusText}`;
+        
+        try {
+          // Attempt to parse as JSON, but have a fallback
+          const errorData = await response.json();
+          console.error('🔍 DEBUG-FRONTEND: Error response from API:', errorData);
+          if (errorData.error) {
+            errorMessage = errorData.error;
+          }
+        } catch (jsonError) {
+          // If JSON parsing fails, use the status text
+          console.error('🔍 DEBUG-FRONTEND: Failed to parse error response as JSON');
+        }
+        
+        throw new Error(errorMessage);
       }
 
+      // For successful responses, proceed as normal
       const data = await response.json();
       console.log('🔍 DEBUG-FRONTEND: Success! Received comparison data:', data);
       setResult(data);
@@ -77,11 +129,24 @@ export default function Home() {
       params.set('city', cityVal);
       params.set('beds', bedsVal);
       params.set('price', String(priceVal));
+      if (categoryVal) {
+        params.set('category', categoryVal);
+      }
       router.push(`?${params.toString()}`);
     } catch (err) {
       console.error('🔍 DEBUG-FRONTEND: Error during comparison:', err);
-      setError(err instanceof Error ? err.message : 'An unknown error occurred');
-      toast.error(err instanceof Error ? err.message : 'An unknown error occurred');
+      
+      // Fixed: Type guard for the error
+      const error = err as { name?: string; message?: string };
+      
+      // Special handling for timeout errors
+      if (error.name === 'AbortError') {
+        setError('Request timed out. The server might be busy or experiencing issues.');
+        toast.error('Request timed out. Please try again later.');
+      } else {
+        setError(error.message || 'An unknown error occurred');
+        toast.error(error.message || 'An unknown error occurred');
+      }
     } finally {
       setLoading(false);
     }
@@ -89,7 +154,7 @@ export default function Home() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    compareRent(city, beds, price);
+    compareRent(city, beds, price, category);
   };
 
   const getResultCardClass = () => {
@@ -163,6 +228,25 @@ export default function Home() {
               placeholder="Enter amount"
             />
           </div>
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">
+            Housing Category
+          </label>
+          <select
+            id="category"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            className="w-full p-2 border rounded"
+          >
+            <option value="">All Categories</option>
+            {HOUSING_CATEGORIES.map((cat) => (
+              <option key={cat.name} value={cat.name}>
+                {cat.name}
+              </option>
+            ))}
+          </select>
         </div>
 
         <button
@@ -245,6 +329,12 @@ export default function Home() {
               </p>
             )}
             
+            {result.category && (
+              <p className="mt-2 text-gray-700">
+                Housing category: <span className="font-medium">{result.category}</span>
+              </p>
+            )}
+            
             {result.adjustmentApplied && (
               <p className="text-xs text-gray-600 mt-2">
                 *Estimated current value is adjusted for data age ({result.dataAgeMention}) using a 5% annual increase model.
@@ -254,6 +344,32 @@ export default function Home() {
           <ShareButton percent={result.percent} />
         </div>
       )}
+
+      {/* Housing Category Legend */}
+      <div className="mt-8">
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="text-lg font-semibold">Housing Categories</h3>
+          <button 
+            onClick={() => setShowLegend(!showLegend)}
+            className="text-blue-600 text-sm hover:underline focus:outline-none"
+          >
+            {showLegend ? 'Hide Details' : 'Show Details'}
+          </button>
+        </div>
+
+        {showLegend && (
+          <div className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
+            <ul className="divide-y divide-gray-200">
+              {HOUSING_CATEGORIES.map((cat) => (
+                <li key={cat.name} className="py-3 first:pt-0 last:pb-0">
+                  <h4 className="font-medium">{cat.name}</h4>
+                  <p className="text-sm text-gray-600">{cat.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </main>
   );
 }

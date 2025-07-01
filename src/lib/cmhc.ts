@@ -1,17 +1,49 @@
 import Papa from 'papaparse';
 import JSZip from 'jszip';
+// Import fs and path only in server context
+const fs = typeof window === 'undefined' ? require('fs') : null;
+const path = typeof window === 'undefined' ? require('path') : null;
 
-interface RentalRecord {
+export interface RentalRecord {
   GEO: string;
   Bedrooms: string;
   VALUE: string;
   RefDate?: string;  
   DataAge?: number;  
   Year?: number;     
+  StructureType?: string;
+  Category?: string;
   [key: string]: string | number | undefined;
 }
 
 let cachedData: RentalRecord[] | null = null;
+let lastCacheCheck: number = 0;
+
+// Check if cache invalidation has been signaled
+const checkCacheInvalidation = () => {
+  try {
+    // Only check once per minute to avoid file system overhead
+    const now = Date.now();
+    if (now - lastCacheCheck < 60000) return;
+    lastCacheCheck = now;
+
+    // Server-side only check (filesystem access)
+    if (typeof window === 'undefined' && fs && path) {
+      const cacheSignalFile = path.join(process.cwd(), 'public', 'data', '.cache-invalidated');
+      if (fs.existsSync(cacheSignalFile)) {
+        const signalTimestamp = parseInt(fs.readFileSync(cacheSignalFile, 'utf-8'));
+        
+        // If the signal file is newer than our last check, invalidate cache
+        if (!isNaN(signalTimestamp) && signalTimestamp > lastCacheCheck - 60000) {
+          console.log('📢 Cache invalidation detected, clearing cached data');
+          cachedData = null;
+        }
+      }
+    }
+  } catch (error) {
+    // Silent catch - don't let this disrupt normal operation
+  }
+}
 
 // List of Ontario cities based on CMHC data
 export const ONTARIO_CITIES = [
@@ -104,7 +136,7 @@ export const ONTARIO_CITIES = [
 /**
  * Normalizes bedroom strings to numeric values
  */
-const normalizeBedrooms = (bedroom: string): string => {
+export const normalizeBedrooms = (bedroom: string): string => {
   if (!bedroom) return '';
   
   const lowerBedroom = bedroom.toLowerCase();
@@ -150,12 +182,13 @@ const normalizeBedrooms = (bedroom: string): string => {
 /**
  * Identifies column names in data that match our expected fields
  */
-const identifyFieldNames = (record: Record<string, string>): Record<string, string> => {
+export const identifyFieldNames = (record: Record<string, string>): Record<string, string> => {
   const fieldMap: Record<string, string> = {
     GEO: '',
     Bedrooms: '',
     VALUE: '',
-    RefDate: ''
+    RefDate: '',
+    StructureType: ''
   };
   
   for (const key of Object.keys(record)) {
@@ -200,21 +233,64 @@ const identifyFieldNames = (record: Record<string, string>): Record<string, stri
     )) {
       fieldMap.RefDate = key;
     }
+    
+    if (fieldMap.StructureType === '' && (
+      lowerKey.includes('type of structure') ||
+      lowerKey.includes('structure') ||
+      lowerKey.includes('building type') ||
+      lowerKey.includes('dwelling structure')
+    )) {
+      fieldMap.StructureType = key;
+    }
+  }
+  
+  // If StructureType wasn't found and there's a field literally named "Type of structure"
+  if (fieldMap.StructureType === '' && record["Type of structure"]) {
+    fieldMap.StructureType = "Type of structure";
   }
   
   return fieldMap;
 };
 
 /**
- * Fetches and processes rental data from Statistics Canada
+ * Fetches and processes rental data from static JSON file or Statistics Canada as fallback
  */
 export const fetchRentalData = async (): Promise<RentalRecord[]> => {
+  // Check for cache invalidation
+  checkCacheInvalidation();
+  
+  // Return cached data if available
   if (cachedData) return cachedData;
   
   try {
-    // Use absolute URL if running on the server side, relative URL if on client
+    // First try to load from the static file
     const isServer = typeof window === 'undefined';
     const baseUrl = isServer ? process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000' : '';
+    
+    console.log('🔍 Fetching CMHC data from static file');
+    try {
+      // Attempt to load from static file first (much faster and more reliable)
+      const staticDataUrl = `${baseUrl}/data/cmhc-data.json`;
+      const staticResponse = await fetch(staticDataUrl, { 
+        cache: 'force-cache',
+        next: { revalidate: 86400 } // Revalidate once per day
+      });
+      
+      if (staticResponse.ok) {
+        const staticData = await staticResponse.json();
+        if (staticData.data && Array.isArray(staticData.data) && staticData.data.length > 0) {
+          console.log(`🔍 Loaded ${staticData.data.length} records from static file`);
+          cachedData = staticData.data;
+          return staticData.data;
+        }
+      }
+    } catch (staticError) {
+      console.warn('🔍 Failed to load static data file:', staticError);
+      // Continue to API fallback
+    }
+    
+    // Fallback to API if static file loading fails
+    console.log('🔍 Falling back to API data fetch');
     const apiUrl = `${baseUrl}/api/cmhc-data`;
     
     const response = await fetch(apiUrl);
@@ -318,6 +394,27 @@ export const fetchRentalData = async (): Promise<RentalRecord[]> => {
           }
         }
         
+        // Extract structure type information
+        let structureType = '';
+        if (fieldMap.StructureType && record[fieldMap.StructureType]) {
+          structureType = record[fieldMap.StructureType];
+        } else {
+          // Look for any field that might contain structure type information
+          for (const [key, value] of Object.entries(record)) {
+            const lowerKey = key.toLowerCase();
+            const lowerValue = (value || '').toLowerCase();
+            
+            if (
+              lowerKey.includes('structure') || 
+              lowerKey.includes('building') || 
+              lowerKey.includes('type') && !lowerKey.includes('unit')
+            ) {
+              structureType = value;
+              break;
+            }
+          }
+        }
+        
         // Calculate data age in months if we have a reference date
         let dataAge: number | undefined = undefined;
         let yearFromRefDate: number | undefined = undefined;
@@ -354,6 +451,9 @@ export const fetchRentalData = async (): Promise<RentalRecord[]> => {
           }
         }
         
+        // Map structure type to our housing category
+        const category = mapStructureTypeToCategory(structureType);
+        
         return {
           GEO: record[fieldMap.GEO],
           Bedrooms: normalizeBedrooms(bedroomInfo),
@@ -361,6 +461,8 @@ export const fetchRentalData = async (): Promise<RentalRecord[]> => {
           RefDate: refDate,
           DataAge: dataAge,
           Year: yearFromRefDate,
+          StructureType: structureType,
+          Category: category,
           ...record
         };
       })
@@ -402,7 +504,7 @@ export const fetchRentalData = async (): Promise<RentalRecord[]> => {
 /**
  * Gets the average rent for a specific city and bedroom count
  */
-export const getAverage = async (city: string, beds: string): Promise<{value: number | null, dataAge?: number}> => {
+export const getAverage = async (city: string, beds: string, category?: string): Promise<{value: number | null, dataAge?: number}> => {
   try {
     const data = await fetchRentalData();
     
@@ -418,7 +520,8 @@ export const getAverage = async (city: string, beds: string): Promise<{value: nu
       const itemCity = item.GEO.split(',')[0].trim();
       const matchesCity = itemCity.toLowerCase() === city.toLowerCase();
       const matchesBeds = item.Bedrooms === beds;
-      return matchesCity && matchesBeds;
+      const matchesCategory = !category || item.Category === category;
+      return matchesCity && matchesBeds && matchesCategory;
     });
     
     // Approach 2: If no exact matches, try partial matching
@@ -426,7 +529,8 @@ export const getAverage = async (city: string, beds: string): Promise<{value: nu
       records = data.filter(item => {
         const matchesCity = item.GEO.toLowerCase().includes(city.toLowerCase());
         const matchesBeds = item.Bedrooms === beds;
-        return matchesCity && matchesBeds;
+        const matchesCategory = !category || item.Category === category;
+        return matchesCity && matchesBeds && matchesCategory;
       });
     }
     
@@ -456,106 +560,51 @@ export const getAverage = async (city: string, beds: string): Promise<{value: nu
       
       if (cityVariations.length > 0) {
         for (const variation of cityVariations) {
-          const variationMatches = data.filter(item => {
-            return item.GEO.toLowerCase().includes(variation.toLowerCase()) && 
-                   item.Bedrooms === beds;
+          const varRecords = data.filter(item => {
+            const itemCity = item.GEO.split(',')[0].trim();
+            const matchesCity = itemCity.toLowerCase() === variation.toLowerCase() || 
+                             item.GEO.toLowerCase().includes(variation.toLowerCase());
+            const matchesBeds = item.Bedrooms === beds;
+            const matchesCategory = !category || item.Category === category;
+            return matchesCity && matchesBeds && matchesCategory;
           });
           
-          if (variationMatches.length > 0) {
-            records = variationMatches;
+          if (varRecords.length > 0) {
+            records = varRecords;
             break;
           }
         }
       }
     }
     
-    // Special case for cities that might be part of metropolitan areas
-    if (records.length === 0) {
-      const metroAreaMappings: Record<string, string[]> = {
-        'Toronto': ['Toronto', 'Toronto CMA', 'Greater Toronto'],
-        'Mississauga': ['Toronto', 'Toronto CMA', 'Greater Toronto'],
-        'Brampton': ['Toronto', 'Toronto CMA', 'Greater Toronto'],
-        'Vaughan': ['Toronto', 'Toronto CMA', 'Greater Toronto'],
-        'Markham': ['Toronto', 'Toronto CMA', 'Greater Toronto'],
-        'Richmond Hill': ['Toronto', 'Toronto CMA', 'Greater Toronto'],
-        'Oakville': ['Toronto', 'Toronto CMA', 'Greater Toronto'],
-        'Burlington': ['Hamilton', 'Hamilton CMA'],
-        'Ottawa': ['Ottawa-Gatineau', 'Ottawa-Gatineau, Ontario part'],
-        'Gatineau': ['Ottawa-Gatineau', 'Ottawa-Gatineau, Quebec part'],
-      };
-      
-      const metroAreas = metroAreaMappings[city] || [];
-      
-      if (metroAreas.length > 0) {
-        for (const metroArea of metroAreas) {
-          const metroMatches = data.filter(item => {
-            return item.GEO.toLowerCase().includes(metroArea.toLowerCase()) && 
-                   item.Bedrooms === beds;
-          });
-          
-          if (metroMatches.length > 0) {
-            records = metroMatches;
-            break;
-          }
-        }
-      }
+    // If we still have no matches and we were filtering by category, try without category
+    if (records.length === 0 && category) {
+      return getAverage(city, beds); // Recursive call without category
     }
     
-    // Last resort: Try matching just city without bedroom matching
+    // Calculate the average rent
     if (records.length === 0) {
-      const cityOnlyMatches = data.filter(item => 
-        item.GEO.toLowerCase().includes(city.toLowerCase())
-      );
-      
-      if (cityOnlyMatches.length > 0) {
-        // Group by bedroom type
-        const bedroomGroups: Record<string, RentalRecord[]> = {};
-        cityOnlyMatches.forEach(record => {
-          if (!bedroomGroups[record.Bedrooms]) {
-            bedroomGroups[record.Bedrooms] = [];
-          }
-          bedroomGroups[record.Bedrooms].push(record);
-        });
-        
-        // Try to find the closest bedroom match
-        if (Object.keys(bedroomGroups).length > 0) {
-          // Map bedroom strings to numeric values for comparison
-          const bedroomValue: Record<string, number> = {
-            '0': 0, // Bachelor
-            '1': 1, // 1 Bedroom  
-            '2': 2, // 2 Bedroom
-            '3+': 3, // 3+ Bedroom
-            '': 0 // Default
-          };
-          
-          const targetValue = bedroomValue[beds] !== undefined ? bedroomValue[beds] : parseInt(beds) || 0;
-          
-          // Find the closest bedroom type
-          let closestBedroom = '';
-          let minDifference = Number.MAX_VALUE;
-          
-          for (const bedroom of Object.keys(bedroomGroups)) {
-            const bedValue = bedroomValue[bedroom] !== undefined ? 
-              bedroomValue[bedroom] : (parseInt(bedroom) || 0);
-            
-            const difference = Math.abs(bedValue - targetValue);
-            
-            if (difference < minDifference) {
-              minDifference = difference;
-              closestBedroom = bedroom;
-            }
-          }
-          
-          if (closestBedroom) {
-            return processRecordsForAverage(bedroomGroups[closestBedroom]);
-          }
-        }
-      }
-      
       return { value: null };
     }
     
-    return processRecordsForAverage(records);
+    let validValues = records
+      .map(item => parseFloat(item.VALUE.replace(/[^\d.]/g, '')))
+      .filter(value => !isNaN(value));
+    
+    if (validValues.length === 0) {
+      return { value: null };
+    }
+    
+    const sum = validValues.reduce((a, b) => a + b, 0);
+    const avg = sum / validValues.length;
+    
+    // Get the data age from the first record
+    const dataAge = records[0].DataAge;
+    
+    return { 
+      value: Math.round(avg), 
+      dataAge 
+    };
   } catch (error) {
     console.error('Error getting average rent:', error);
     return { value: null };
@@ -641,3 +690,83 @@ export const getAvailableCities = async (): Promise<string[]> => {
     return [];
   }
 };
+
+/**
+ * Gets the available housing categories for a specific city and bedroom count
+ */
+export const getAvailableCategories = async (city: string, beds: string): Promise<string[]> => {
+  try {
+    const data = await fetchRentalData();
+    
+    if (data.length === 0) {
+      return [];
+    }
+    
+    // Find records for this city and bedroom count
+    const records = data.filter(item => {
+      // Clean up GEO field to get just the city name
+      const itemCity = item.GEO.split(',')[0].trim();
+      const matchesCity = itemCity.toLowerCase() === city.toLowerCase() || 
+                        item.GEO.toLowerCase().includes(city.toLowerCase());
+      const matchesBeds = item.Bedrooms === beds;
+      return matchesCity && matchesBeds;
+    });
+    
+    // Extract unique categories
+    const categories = records
+      .map(item => item.Category)
+      .filter((category): category is string => !!category);
+    
+    return Array.from(new Set(categories));
+  } catch (error) {
+    console.error('Error getting available categories:', error);
+    return [];
+  }
+};
+
+// Housing category definitions
+export interface HousingCategory {
+  name: string;
+  description: string;
+}
+
+export const HOUSING_CATEGORIES: HousingCategory[] = [
+  { name: "Multi-Plex", description: "Small residential buildings with 3-5 apartment units" },
+  { name: "Townhouse", description: "Row housing units sharing walls with adjacent units" },
+  { name: "Low-Rise", description: "Apartment buildings with 3-5 floors" },
+  { name: "Highrise", description: "Apartment buildings with 6 or more floors" }
+];
+
+// Mapping from CMHC structure types to our housing categories
+const STRUCTURE_CATEGORY_MAP: Record<string, string> = {
+  "Row and apartment structures of three units and over": "Multi-Plex",
+  "Row structures of three units and over": "Townhouse",
+  "Apartment structures of three units and over": "Low-Rise",
+  "Apartment structures of six units and over": "Highrise"
+};
+
+/**
+ * Maps structure type to one of our defined categories
+ */
+export const mapStructureTypeToCategory = (structureType: string | undefined): string => {
+  if (!structureType) return '';
+  
+  return STRUCTURE_CATEGORY_MAP[structureType] || '';
+};
+
+// Add CommonJS exports at the end of the file
+// This allows the functions to be imported using require() in CommonJS scripts
+// while maintaining the ES module exports for the Next.js application
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    normalizeBedrooms,
+    identifyFieldNames,
+    mapStructureTypeToCategory,
+    fetchRentalData,
+    getAverage,
+    getAvailableCities,
+    getAvailableCategories,
+    ONTARIO_CITIES,
+    HOUSING_CATEGORIES
+  };
+}
