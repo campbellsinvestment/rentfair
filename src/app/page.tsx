@@ -131,6 +131,24 @@ function MainContent() {
         params.set('category', categoryVal);
       }
       router.push(`?${params.toString()}`);
+
+      // Wait for the next render cycle before attempting to scroll
+      setTimeout(() => {
+        if (resultsRef.current) {
+          // Check if the results are already visible in the viewport
+          const rect = resultsRef.current.getBoundingClientRect();
+          const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+          
+          // Only scroll if the results aren't fully visible
+          if (!isVisible) {
+            resultsRef.current.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'nearest' 
+            });
+          }
+        }
+      }, 100); // Small delay to ensure DOM is updated
+      
     } catch (err) {
       const error = err as { name?: string; message?: string };
       
@@ -156,13 +174,6 @@ function MainContent() {
     if (percent < -0.15) return 'result-card-low';
     return 'result-card-average';
   };
-
-  // Scroll to results section when it appears
-  useEffect(() => {
-    if (result && resultsRef.current) {
-      resultsRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [result]);
 
   return (
     <div className="home-container">
