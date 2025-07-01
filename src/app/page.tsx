@@ -3,7 +3,7 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { toast, Toaster } from 'react-hot-toast';
-import ShareButton from '@/app/components/ShareButton';  // Fixed import path
+import ShareButton from '@/app/components/ShareButton';
 import { ONTARIO_CITIES, HOUSING_CATEGORIES } from '@/lib/cmhc';
 
 // Type for comparison result
@@ -35,7 +35,9 @@ export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);
   const [result, setResult] = useState<ComparisonResult | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [showLegend, setShowLegend] = useState<boolean>(false); // For housing categories info
+  const [showLegend, setShowLegend] = useState<boolean>(false);
+  const [showDataExplanation, setShowDataExplanation] = useState<boolean>(false);
+  const [notificationVisible, setNotificationVisible] = useState<boolean>(false);
 
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -54,7 +56,6 @@ export default function Home() {
       if (categoryParam) {
         setCategory(categoryParam);
       }
-      // Fixed: Handle null with optional chaining or passing undefined
       compareRent(cityParam, bedsParam, Number(priceParam), categoryParam || undefined);
     }
   }, [searchParams]);
@@ -63,7 +64,7 @@ export default function Home() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(`/api/test-cities?city=${encodeURIComponent(city)}&beds=${encodeURIComponent(beds)}`);
+        const response = await fetch(`/api/cmhc-data?city=${encodeURIComponent(city)}&beds=${encodeURIComponent(beds)}`);
         if (response.ok) {
           const data = await response.json();
           if (data.categories && Array.isArray(data.categories)) {
@@ -100,29 +101,30 @@ export default function Home() {
 
       console.log('🔍 DEBUG-FRONTEND: API response status:', response.status, response.statusText);
       
-      // For non-OK responses, handle more carefully
       if (!response.ok) {
         let errorMessage = `Error ${response.status}: ${response.statusText}`;
         
         try {
-          // Attempt to parse as JSON, but have a fallback
           const errorData = await response.json();
           console.error('🔍 DEBUG-FRONTEND: Error response from API:', errorData);
           if (errorData.error) {
             errorMessage = errorData.error;
           }
         } catch (jsonError) {
-          // If JSON parsing fails, use the status text
           console.error('🔍 DEBUG-FRONTEND: Failed to parse error response as JSON');
         }
         
         throw new Error(errorMessage);
       }
 
-      // For successful responses, proceed as normal
       const data = await response.json();
       console.log('🔍 DEBUG-FRONTEND: Success! Received comparison data:', data);
       setResult(data);
+      
+      // Show success notification
+      toast.success('Comparison completed successfully!');
+      setNotificationVisible(true);
+      setTimeout(() => setNotificationVisible(false), 5000);
       
       // Update URL with query parameters
       const params = new URLSearchParams();
@@ -136,10 +138,8 @@ export default function Home() {
     } catch (err) {
       console.error('🔍 DEBUG-FRONTEND: Error during comparison:', err);
       
-      // Fixed: Type guard for the error
       const error = err as { name?: string; message?: string };
       
-      // Special handling for timeout errors
       if (error.name === 'AbortError') {
         setError('Request timed out. The server might be busy or experiencing issues.');
         toast.error('Request timed out. Please try again later.');
@@ -158,218 +158,265 @@ export default function Home() {
   };
 
   const getResultCardClass = () => {
-    if (!result) return 'bg-gray-100';
+    if (!result) return '';
     const { percent } = result;
-    if (percent > 0.15) return 'bg-red-100 border-red-500';
-    if (percent < -0.15) return 'bg-green-100 border-green-500';
-    return 'bg-yellow-100 border-yellow-500';
+    if (percent > 0.15) return 'result-card-high';
+    if (percent < -0.15) return 'result-card-low';
+    return 'result-card-average';
   };
 
   return (
-    <main className="container mx-auto px-4 py-8 max-w-2xl">
+    <div className="home-container">
       <Toaster position="top-right" />
-      <h1 className="text-3xl font-bold mb-6 text-center">RentFair</h1>
-      <p className="mb-6 text-center text-gray-600">
-        Compare your rent to average market rates in Ontario
-      </p>
-
-      <form onSubmit={handleSubmit} className="mb-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-          <div>
-            <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1">
-              City
-            </label>
-            <select
-              id="city"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-              className="w-full p-2 border rounded"
-              required
-            >
-              {ONTARIO_CITIES.map((cityOption) => (
-                <option key={cityOption} value={cityOption}>
-                  {cityOption}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="beds" className="block text-sm font-medium text-gray-700 mb-1">
-              Bedrooms
-            </label>
-            <select
-              id="beds"
-              value={beds}
-              onChange={(e) => setBeds(e.target.value)}
-              className="w-full p-2 border rounded"
-              required
-            >
-              {BEDROOM_OPTIONS.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-1">
-              Monthly Rent ($)
-            </label>
-            <input
-              id="price"
-              type="number"
-              min="0"
-              value={price || ''}
-              onChange={(e) => setPrice(e.target.valueAsNumber)}
-              className="w-full p-2 border rounded"
-              required
-              placeholder="Enter amount"
-            />
+      
+      {notificationVisible && (
+        <div className="notification">
+          <div className="notification-content">
+            <span>Comparison completed successfully!</span>
+            <button onClick={() => setNotificationVisible(false)}>×</button>
           </div>
         </div>
+      )}
+      
+      <section className="hero-section">
+        <h1>RentFair</h1>
+        <p className="tagline">
+          Compare your rent to average market rates in Ontario
+        </p>
+      </section>
 
-        <div className="mb-4">
-          <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">
-            Housing Category
-          </label>
-          <select
-            id="category"
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-            className="w-full p-2 border rounded"
+      <section className="form-section">
+        <form onSubmit={handleSubmit}>
+          <div className="form-grid">
+            <div className="form-group">
+              <label htmlFor="city">City</label>
+              <select
+                id="city"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                required
+              >
+                {ONTARIO_CITIES.map((cityOption) => (
+                  <option key={cityOption} value={cityOption}>
+                    {cityOption}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="beds">Bedrooms</label>
+              <select
+                id="beds"
+                value={beds}
+                onChange={(e) => setBeds(e.target.value)}
+                required
+              >
+                {BEDROOM_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="price">Monthly Rent ($)</label>
+              <input
+                id="price"
+                type="number"
+                min="0"
+                value={price || ''}
+                onChange={(e) => setPrice(e.target.valueAsNumber)}
+                required
+                placeholder="Enter amount"
+              />
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="category">Housing Category</label>
+            <select
+              id="category"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <option value="">All Categories</option>
+              {HOUSING_CATEGORIES.map((cat) => (
+                <option key={cat.name} value={cat.name}>
+                  {cat.name}
+                </option>
+              ))}
+            </select>
+            <button 
+              type="button" 
+              className="info-button"
+              onClick={() => setShowLegend(!showLegend)}
+            >
+              ?
+            </button>
+          </div>
+
+          <button
+            type="submit"
+            className="submit-button"
+            disabled={loading}
           >
-            <option value="">All Categories</option>
-            {HOUSING_CATEGORIES.map((cat) => (
-              <option key={cat.name} value={cat.name}>
-                {cat.name}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition-colors"
-          disabled={loading}
-        >
-          {loading ? 'Comparing...' : 'Compare Rent'}
-        </button>
-      </form>
+            {loading ? 'Comparing...' : 'Compare Rent'}
+          </button>
+        </form>
+      </section>
 
       {error && (
-        <div className="p-4 mb-4 bg-red-100 border border-red-500 rounded text-red-700">
+        <div className="error-message">
           {error}
         </div>
       )}
 
       {result && (
-        <div className={`p-6 rounded-lg border ${getResultCardClass()} shadow-sm`}>
-          <h2 className="text-2xl font-bold mb-4">Results</h2>
+        <section className={`result-card ${getResultCardClass()}`}>
+          <h2>Results</h2>
           
           {/* Data age warning banner */}
           {result.dataAge && result.dataAge > 6 && (
-            <div className="mb-4 p-3 bg-yellow-50 border border-yellow-300 rounded text-yellow-800 text-sm">
-              <p className="font-medium">Data is {result.dataAgeMention}</p>
+            <div className="data-age-warning">
+              <p className="warning-title">Data is {result.dataAgeMention}</p>
               <p>Rental prices may have changed since data collection.</p>
             </div>
           )}
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-            <div>
-              <p className="text-sm text-gray-600">Average Market Rent</p>
-              <p className="text-xl font-semibold">${result.average.toFixed(2)}</p>
+          <div className="result-grid">
+            <div className="result-item">
+              <p className="result-label">Average Market Rent</p>
+              <p className="result-value">${result.average.toFixed(2)}</p>
               {result.adjustmentApplied && (
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="result-adjusted">
                   Est. current: ${result.adjustedAverage?.toFixed(2)}*
                 </p>
               )}
             </div>
-            <div>
-              <p className="text-sm text-gray-600">Difference</p>
-              <p className="text-xl font-semibold">
+            <div className="result-item">
+              <p className="result-label">Difference</p>
+              <p className="result-value">
                 ${result.delta > 0 ? '+' : ''}
                 {result.delta.toFixed(2)}
               </p>
               {result.adjustmentApplied && result.adjustedAverage && (
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="result-adjusted">
                   Est. current: ${(price - result.adjustedAverage).toFixed(2)}*
                 </p>
               )}
             </div>
-            <div>
-              <p className="text-sm text-gray-600">Percentage</p>
-              <p className="text-xl font-semibold">
+            <div className="result-item">
+              <p className="result-label">Percentage</p>
+              <p className="result-value">
                 {result.percent > 0 ? '+' : ''}
                 {(result.percent * 100).toFixed(1)}%
               </p>
               {result.adjustmentApplied && result.adjustedAverage && (
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="result-adjusted">
                   Est. current: {((price - result.adjustedAverage) / result.adjustedAverage * 100).toFixed(1)}%*
                 </p>
               )}
             </div>
           </div>
           
-          <div className="mt-2">
+          <div className="result-summary">
             {result.percent > 0.15 && (
-              <p className="text-red-700 font-medium">
+              <p className="summary-high">
                 This rent is above the market average.
               </p>
             )}
             {result.percent < -0.15 && (
-              <p className="text-green-700 font-medium">
+              <p className="summary-low">
                 This rent is below the market average.
               </p>
             )}
             {result.percent >= -0.15 && result.percent <= 0.15 && (
-              <p className="text-yellow-700 font-medium">
+              <p className="summary-average">
                 This rent is close to the market average.
               </p>
             )}
             
             {result.category && (
-              <p className="mt-2 text-gray-700">
-                Housing category: <span className="font-medium">{result.category}</span>
+              <p className="category-info">
+                Housing category: <span>{result.category}</span>
               </p>
             )}
             
             {result.adjustmentApplied && (
-              <p className="text-xs text-gray-600 mt-2">
+              <p className="adjustment-note">
                 *Estimated current value is adjusted for data age ({result.dataAgeMention}) using a 5% annual increase model.
               </p>
             )}
           </div>
-          <ShareButton percent={result.percent} />
-        </div>
+          
+          <div className="result-actions">
+            <ShareButton percent={result.percent} />
+            <button 
+              className="data-info-button"
+              onClick={() => setShowDataExplanation(!showDataExplanation)}
+            >
+              About the Data
+            </button>
+          </div>
+        </section>
       )}
 
       {/* Housing Category Legend */}
-      <div className="mt-8">
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="text-lg font-semibold">Housing Categories</h3>
-          <button 
-            onClick={() => setShowLegend(!showLegend)}
-            className="text-blue-600 text-sm hover:underline focus:outline-none"
-          >
-            {showLegend ? 'Hide Details' : 'Show Details'}
-          </button>
-        </div>
-
-        {showLegend && (
-          <div className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
-            <ul className="divide-y divide-gray-200">
-              {HOUSING_CATEGORIES.map((cat) => (
-                <li key={cat.name} className="py-3 first:pt-0 last:pb-0">
-                  <h4 className="font-medium">{cat.name}</h4>
-                  <p className="text-sm text-gray-600">{cat.description}</p>
-                </li>
-              ))}
-            </ul>
+      {showLegend && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h3>Housing Categories Explained</h3>
+              <button onClick={() => setShowLegend(false)} className="modal-close">×</button>
+            </div>
+            <div className="modal-body">
+              <ul className="category-list">
+                {HOUSING_CATEGORIES.map((cat) => (
+                  <li key={cat.name} className="category-item">
+                    <h4>{cat.name}</h4>
+                    <p>{cat.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        )}
-      </div>
-    </main>
+        </div>
+      )}
+
+      {/* Data Explanation Modal */}
+      {showDataExplanation && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h3>About the Data</h3>
+              <button onClick={() => setShowDataExplanation(false)} className="modal-close">×</button>
+            </div>
+            <div className="modal-body">
+              <h4>Data Source</h4>
+              <p>The rent comparison data is sourced from the Canada Mortgage and Housing Corporation (CMHC), which conducts regular rental market surveys across Canadian cities.</p>
+              
+              <h4>Data Collection</h4>
+              <p>CMHC typically collects data twice a year (April and October) through surveys of property managers and landlords. The survey targets rental properties with three or more units.</p>
+              
+              <h4>Data Age</h4>
+              <p>When data is older than 6 months, we apply an estimated adjustment based on a 5% annual increase model to better reflect current market conditions.</p>
+              
+              <h4>Limitations</h4>
+              <ul>
+                <li>The data may not include all types of rental properties, particularly basement apartments, single-family home rentals, or newly built units.</li>
+                <li>Regional variations within cities are not always reflected in the average.</li>
+                <li>Rental incentives (like one month free) may not be factored into the reported rents.</li>
+                <li>Data for smaller communities may be less comprehensive.</li>
+              </ul>
+              
+              <h4>How to Interpret Results</h4>
+              <p>A rent that is within 15% of the average is considered to be at market rate. If your rent is more than 15% above average, you may be paying premium prices. If it's more than 15% below average, you likely have a good deal.</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
