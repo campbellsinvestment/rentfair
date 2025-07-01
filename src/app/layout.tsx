@@ -28,8 +28,13 @@ export default function RootLayout({
           <div className="container">
             <div className="footer-content">
               <p className="footer-text">
-                Data sourced from Canada Mortgage and Housing Corporation (CMHC). RentFair does not collect or store any personal user data on this platform.
+                This tool uses official rental market data from <strong>Statistics Canada</strong>, sourced from the Canada Mortgage and Housing Corporation (CMHC) Rental Market Survey. RentFair does not collect or store any personal user data on this platform.
               </p>
+              <div className="footer-verification">
+                <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410013301" target="_blank" rel="noopener noreferrer" className="footer-verify-link">
+                  Verify Data Source
+                </a>
+              </div>
             </div>
             <div className="copyright">
               © {new Date().getFullYear()} RentFair. All rights reserved.

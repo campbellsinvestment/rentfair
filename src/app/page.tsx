@@ -169,7 +169,37 @@ export default function Home() {
         <p className="tagline">
           Compare your rent to average market rates in Ontario
         </p>
+        <div className="data-certification-badge">
+          <div className="data-badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 8V20.9932C21 21.5501 20.5552 22 20.0066 22H3.9934C3.44495 22 3 21.556 3 21.0082V2.9918C3 2.45531 3.4487 2 4.00221 2H14.9968L21 8Z" stroke="currentColor" strokeWidth="2"/>
+              <path d="M14 2V6.99767C14 7.55097 14.4423 8 14.9914 8H21" stroke="currentColor" strokeWidth="2"/>
+              <path d="M7.5 15.5L10.5 18.5L16.5 11.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          <span>Official Statistics Canada Data</span>
+        </div>
       </section>
+
+      <div className="data-certification-container">
+        <div className="data-certification">
+          <div className="certification-text">
+            <p className="warning-title">Official Statistics Canada Data</p>
+            <p>Data sourced from the Canada Mortgage and Housing Corporation (CMHC) Rental Market Survey.</p>
+            <p className="certification-date">Last data update: July 2025</p>
+          </div>
+          <div className="certification-verify">
+            <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410013301" target="_blank" rel="noopener noreferrer" className="verify-link">
+              Verify Source
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="verify-icon">
+                <path d="M10 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M15 4H20V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M20 4L12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
 
       <section className="form-section">
         <form onSubmit={handleSubmit}>

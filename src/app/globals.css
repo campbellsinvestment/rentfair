@@ -775,7 +775,38 @@ footer {
   color: var(--text-muted);
   font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.footer-text strong {
+  color: var(--text-dark);
+}
+
+.footer-verification {
+  display: flex;
+  justify-content: center;
   margin-bottom: 2rem;
+}
+
+.footer-verify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background-color: #F8F9FC;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  color: var(--text-dark);
+}
+
+.footer-verify-link:hover {
+  background-color: var(--bg-subtle-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .copyright {
@@ -812,6 +843,16 @@ footer {
   
   .modal-content {
     width: 95%;
+  }
+  
+  .data-certification {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .certification-verify {
+    margin-top: 0.5rem;
+    align-self: flex-end;
   }
 }
 
@@ -943,4 +984,145 @@ footer {
 
 .text-green-600 .market-indicator {
   color: var(--success-color);
+}
+
+/* Data certification badge */
+.data-certification-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  margin-top: 1rem;
+  color: white;
+  font-weight: 500;
+  font-size: 0.85rem;
+  backdrop-filter: blur(4px);
+}
+
+.data-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Data certification container */
+.data-certification-container {
+  margin-bottom: 2rem;
+}
+
+.data-certification {
+  background-color: rgba(249, 250, 251, 0.95);
+  border: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  margin: 0 0 1.5rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.06), 
+              0 -1px 2px -1px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.data-certification::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--secondary-color);
+}
+
+.certification-text {
+  flex: 1;
+}
+
+.certification-text p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.certification-text p:last-child {
+  margin-bottom: 0;
+}
+
+.certification-text strong {
+  color: var(--text-dark);
+}
+
+.certification-date {
+  font-size: 0.8rem !important;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.certification-verify {
+  display: flex;
+  align-items: center;
+}
+
+.verify-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background-color: #F8F9FC;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.verify-link:hover {
+  background-color: var(--bg-subtle-hover);
+  transform: translateY(-2px);
+}
+
+.verify-icon {
+  margin-left: 0.25rem;
+  opacity: 0.7;
+}
+
+/* Official data watermark in result card */
+.result-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.result-card::after {
+  content: "CMHC Verified Data";
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--border-color);
+  opacity: 0.5;
+  transform: rotate(-45deg);
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .data-certification {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .certification-verify {
+    margin-top: 0.5rem;
+    align-self: flex-end;
+  }
 }
