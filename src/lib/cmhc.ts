@@ -266,14 +266,46 @@ export const fetchRentalData = async (): Promise<RentalRecord[]> => {
     // First try to load from the static file
     const isServer = typeof window === 'undefined';
     
-    // On the server, use a relative path instead of localhost URL
-    // This ensures it works both locally and on Vercel
-    const staticDataPath = isServer ? '/data/cmhc-data.json' : '/data/cmhc-data.json';
-    
     console.log('🔍 Fetching CMHC data from static file');
     try {
+      // Create proper absolute URLs for server environment
+      // In the browser, relative URLs work fine; on the server, we need to use fs or provide a base URL
+      let staticDataUrl;
+      
+      if (isServer) {
+        // On the server, either use fs directly or create an absolute URL
+        try {
+          // Try to use filesystem directly first (more reliable)
+          if (fs && path) {
+            const filePath = path.join(process.cwd(), 'public', 'data', 'cmhc-data.json');
+            if (fs.existsSync(filePath)) {
+              const fileData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+              if (fileData.data && Array.isArray(fileData.data)) {
+                console.log(`🔍 Loaded ${fileData.data.length} records from filesystem`);
+                cachedData = fileData.data;
+                return fileData.data;
+              }
+            }
+          }
+        } catch (fsError) {
+          console.log('🔍 Failed to load file from filesystem, trying URL fetch');
+        }
+        
+        // Fallback to URL fetch with absolute URL (needs a valid base URL in server environment)
+        const baseUrl = process.env.VERCEL_URL 
+          ? `https://${process.env.VERCEL_URL}`
+          : process.env.NEXT_PUBLIC_BASE_URL || 'https://rentfairontario.vercel.app';
+          
+        staticDataUrl = new URL('/data/cmhc-data.json', baseUrl).toString();
+      } else {
+        // In browser, relative URL works fine
+        staticDataUrl = '/data/cmhc-data.json';
+      }
+      
+      console.log(`🔍 Fetching data from: ${staticDataUrl}`);
+      
       // Attempt to load from static file first (much faster and more reliable)
-      const staticResponse = await fetch(staticDataPath, { 
+      const staticResponse = await fetch(staticDataUrl, { 
         // Use only one caching strategy to fix the conflict
         next: { revalidate: 86400 } // Revalidate once per day
       });
@@ -293,10 +325,24 @@ export const fetchRentalData = async (): Promise<RentalRecord[]> => {
     
     // Fallback to API if static file loading fails
     console.log('🔍 Falling back to API data fetch');
-    // Use a relative path for API access too - works in both environments
-    const apiPath = '/api/cmhc-data';
     
-    const response = await fetch(apiPath, {
+    // Create proper absolute URL for API in server environment
+    let apiUrl;
+    
+    if (isServer) {
+      const baseUrl = process.env.VERCEL_URL 
+        ? `https://${process.env.VERCEL_URL}`
+        : process.env.NEXT_PUBLIC_BASE_URL || 'https://rentfairontario.vercel.app';
+        
+      apiUrl = new URL('/api/cmhc-data', baseUrl).toString();
+    } else {
+      // In browser, relative URL works fine
+      apiUrl = '/api/cmhc-data';
+    }
+    
+    console.log(`🔍 Fetching from API: ${apiUrl}`);
+    
+    const response = await fetch(apiUrl, {
       // Consistent caching strategy
       next: { revalidate: 86400 }
     });
