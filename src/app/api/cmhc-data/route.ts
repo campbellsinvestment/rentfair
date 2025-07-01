@@ -1,7 +1,9 @@
 // filepath: /Users/stepocampbell/Documents/GitHub/rentfair/src/app/api/cmhc-data/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import JSZip from 'jszip';
+import Papa from 'papaparse';
 import { checkForDataUpdates } from '@/lib/data-refresh-scheduler';
+import { identifyFieldNames, normalizeBedrooms, mapStructureTypeToCategory } from '@/lib/cmhc';
 
 // Cache for the processed data (24 hours)
 let cachedData: any = null;
@@ -13,10 +15,15 @@ let isCheckingForUpdates = false;
 
 /**
  * API endpoint for retrieving CMHC rental market data
- * Fetches data from Statistics Canada, processes it, and caches the results
+ * Fetches data from Statistics Canada, processes it, and returns only the necessary data
  */
 export async function GET(request: NextRequest) {
   try {
+    // Parse query parameters
+    const searchParams = request.nextUrl.searchParams;
+    const city = searchParams.get('city');
+    const beds = searchParams.get('beds');
+    
     // Check for data updates if we're not already doing so (non-blocking)
     if (!isCheckingForUpdates) {
       isCheckingForUpdates = true;
@@ -42,8 +49,24 @@ export async function GET(request: NextRequest) {
     // Return cached data if available and valid
     const now = Date.now();
     if (cachedData && (now - cacheTime < CACHE_DURATION)) {
+      // If city and beds are provided, filter the cached data
+      if (city && beds) {
+        const filteredData = filterData(cachedData, city, beds);
+        return NextResponse.json(filteredData, {
+          headers: { 
+            'Cache-Control': 'max-age=86400',
+            'CDN-Cache-Control': 'public, max-age=86400',
+            'Vercel-CDN-Cache-Control': 'public, max-age=86400'
+          }
+        });
+      }
+      
       return NextResponse.json(cachedData, {
-        headers: { 'Cache-Control': 'max-age=86400' }
+        headers: { 
+          'Cache-Control': 'max-age=86400',
+          'CDN-Cache-Control': 'public, max-age=86400',
+          'Vercel-CDN-Cache-Control': 'public, max-age=86400'
+        }
       });
     }
 
@@ -112,20 +135,32 @@ export async function GET(request: NextRequest) {
         );
       }
       
-      // Cache the data
-      cachedData = { data: csvData };
+      // Process the data instead of returning raw CSV
+      const processedData = processRentalData(csvData);
+      
+      // Cache the processed data
+      cachedData = processedData;
       cacheTime = now;
       
-      return NextResponse.json(
-        { data: csvData },
-        {
+      // If city and beds are provided, filter the data
+      if (city && beds) {
+        const filteredData = filterData(processedData, city, beds);
+        return NextResponse.json(filteredData, {
           headers: { 
             'Cache-Control': 'max-age=86400',
             'CDN-Cache-Control': 'public, max-age=86400',
             'Vercel-CDN-Cache-Control': 'public, max-age=86400'
           }
+        });
+      }
+      
+      return NextResponse.json(processedData, {
+        headers: { 
+          'Cache-Control': 'max-age=86400',
+          'CDN-Cache-Control': 'public, max-age=86400',
+          'Vercel-CDN-Cache-Control': 'public, max-age=86400'
         }
-      );
+      });
     } catch (zipError) {
       return NextResponse.json(
         { error: `Error processing zip file: ${zipError instanceof Error ? zipError.message : 'Unknown error'}` },
@@ -138,4 +173,195 @@ export async function GET(request: NextRequest) {
       { status: 500 }
     );
   }
+}
+
+/**
+ * Process the raw CSV data into a more useful format
+ */
+function processRentalData(csvData: string) {
+  // Parse the CSV data
+  const parsedData = Papa.parse<Record<string, string>>(csvData, {
+    header: true,
+    skipEmptyLines: true
+  });
+  
+  if (!parsedData.data || parsedData.data.length === 0) {
+    return { data: [], categories: [], cities: [] };
+  }
+  
+  // Identify field names that match what we need
+  const sampleRecord = parsedData.data[0];
+  const fieldMap = identifyFieldNames(sampleRecord);
+  
+  // Process the data
+  const processedData = parsedData.data
+    // Filter out rows without city/location data or value data
+    .filter(record => record[fieldMap.GEO] && record[fieldMap.VALUE])
+    // Filter for Ontario cities
+    .filter(record => {
+      const geo = record[fieldMap.GEO];
+      return geo && (
+        geo.endsWith(', Ontario') || 
+        geo.includes('Ontario') || 
+        geo.includes('ON,') ||
+        geo.includes(', ON')
+      );
+    })
+    // Map to our expected format
+    .map(record => {
+      let bedroomInfo = '';
+      
+      // Extract bedroom info from available fields
+      if (fieldMap.Bedrooms && record[fieldMap.Bedrooms]) {
+        bedroomInfo = record[fieldMap.Bedrooms];
+      } else {
+        // Look for any field that might contain bedroom info
+        for (const [key, value] of Object.entries(record)) {
+          const lowerKey = key.toLowerCase();
+          const lowerValue = (value || '').toLowerCase();
+          
+          if (
+            lowerKey.includes('bedroom') || 
+            lowerKey.includes('unit') || 
+            lowerValue.includes('bedroom') || 
+            lowerValue.includes('bachelor')
+          ) {
+            bedroomInfo = value;
+            break;
+          }
+        }
+      }
+      
+      // Extract reference date information
+      let refDate = '';
+      if (fieldMap.RefDate && record[fieldMap.RefDate]) {
+        refDate = record[fieldMap.RefDate];
+      } else {
+        // Look for any field that might contain date information
+        for (const [key, value] of Object.entries(record)) {
+          const lowerKey = key.toLowerCase();
+          if (
+            lowerKey.includes('date') || 
+            lowerKey.includes('period') || 
+            lowerKey.includes('year') ||
+            lowerKey.includes('ref')
+          ) {
+            refDate = value;
+            break;
+          }
+        }
+      }
+      
+      // Extract structure type information
+      let structureType = '';
+      if (fieldMap.StructureType && record[fieldMap.StructureType]) {
+        structureType = record[fieldMap.StructureType];
+      }
+      
+      // Calculate data age in months if we have a reference date
+      let dataAge = undefined;
+      let year = undefined;
+      
+      if (refDate) {
+        // Try to parse the date - handle different formats
+        let refDateObj: Date | null = null;
+        
+        // Try YYYY-MM-DD format
+        if (/^\d{4}-\d{1,2}-\d{1,2}$/.test(refDate)) {
+          refDateObj = new Date(refDate);
+          year = refDateObj.getFullYear();
+        } 
+        // Try YYYY format
+        else if (/^\d{4}$/.test(refDate)) {
+          year = parseInt(refDate);
+          refDateObj = new Date(year, 0, 1);
+        }
+        // Try to extract year from text (like "Reference period: 2023")
+        else {
+          const yearMatch = refDate.match(/\b(20\d{2})\b/);
+          if (yearMatch) {
+            year = parseInt(yearMatch[1]);
+            refDateObj = new Date(year, 0, 1);
+          }
+        }
+        
+        if (refDateObj && !isNaN(refDateObj.getTime())) {
+          const currentDate = new Date();
+          const monthsDiff = 
+            (currentDate.getFullYear() - refDateObj.getFullYear()) * 12 + 
+            (currentDate.getMonth() - refDateObj.getMonth());
+          dataAge = monthsDiff;
+        }
+      }
+      
+      // Map structure type to our housing category
+      const category = mapStructureTypeToCategory(structureType);
+      
+      return {
+        city: record[fieldMap.GEO].split(',')[0].trim(),
+        fullLocation: record[fieldMap.GEO],
+        beds: normalizeBedrooms(bedroomInfo),
+        value: parseFloat(record[fieldMap.VALUE].replace(/[^\d.]/g, '')),
+        refDate,
+        dataAge,
+        year,
+        structureType,
+        category
+      };
+    })
+    // Filter out records without bedroom info or value
+    .filter(record => record.beds && !isNaN(record.value));
+  
+  // Find most recent year in the data
+  const years = processedData
+    .filter(r => r.year !== undefined)
+    .map(r => r.year as number);
+  
+  const uniqueYears = Array.from(new Set(years)).sort((a, b) => b - a); // Sort descending
+  let latestYear = uniqueYears.length > 0 ? uniqueYears[0] : 0;
+  
+  // Filter for only records from the most recent year
+  const recentRecords = latestYear > 2008 // Only filter if we found years more recent than 2008
+    ? processedData.filter(r => r.year === latestYear)
+    : processedData;
+    
+  // Extract unique cities and categories
+  const cities = Array.from(new Set(recentRecords.map(r => r.city))).sort();
+  const categories = Array.from(new Set(recentRecords
+    .filter(r => r.category)
+    .map(r => r.category))).sort();
+  
+  return {
+    data: recentRecords,
+    cities,
+    categories
+  };
+}
+
+/**
+ * Filter data for specific city and bedroom count
+ */
+function filterData(data: any, city: string, beds: string) {
+  if (!data.data || !Array.isArray(data.data)) {
+    return { data: [], categories: [] };
+  }
+  
+  // Filter records for this city and bedroom count
+  const filteredRecords = data.data.filter((record: any) => {
+    const cityMatches = record.city.toLowerCase() === city.toLowerCase() || 
+                      record.fullLocation.toLowerCase().includes(city.toLowerCase());
+    const bedsMatch = record.beds === beds;
+    return cityMatches && bedsMatch;
+  });
+  
+  // Get available categories for this city/beds combo
+  const categories = Array.from(new Set(filteredRecords
+    .filter((r: any) => r.category)
+    .map((r: any) => r.category)
+  ));
+  
+  return {
+    data: filteredRecords,
+    categories
+  };
 }
