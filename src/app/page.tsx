@@ -4,28 +4,18 @@ import { useState, useEffect, FormEvent } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { toast, Toaster } from 'react-hot-toast';
 import ShareButton from './components/ShareButton';
+import { ONTARIO_CITIES } from '@/lib/cmhc';
 
 // Type for comparison result
 interface ComparisonResult {
   average: number;
   delta: number;
   percent: number;
+  dataAge?: number;
+  dataAgeMention: string;
+  adjustedAverage?: number;
+  adjustmentApplied: boolean;
 }
-
-// List of Ontario cities
-const ONTARIO_CITIES = [
-  'Toronto',
-  'Ottawa',
-  'Mississauga',
-  'Brampton',
-  'Hamilton',
-  'London',
-  'Windsor',
-  'Kitchener',
-  'Kingston',
-  'Sudbury',
-  'Niagara',
-];
 
 // Bedroom options
 const BEDROOM_OPTIONS = [
@@ -64,16 +54,22 @@ export default function Home() {
     setLoading(true);
     setError(null);
     try {
+      console.log('🔍 DEBUG-FRONTEND: Starting comparison for:', { city: cityVal, beds: bedsVal, price: priceVal });
+      
       const response = await fetch(
         `/api/compare?city=${encodeURIComponent(cityVal)}&beds=${encodeURIComponent(bedsVal)}&price=${priceVal}`
       );
 
+      console.log('🔍 DEBUG-FRONTEND: API response status:', response.status, response.statusText);
+      
       if (!response.ok) {
         const errorData = await response.json();
+        console.error('🔍 DEBUG-FRONTEND: Error response from API:', errorData);
         throw new Error(errorData.error || 'Failed to fetch comparison data');
       }
 
       const data = await response.json();
+      console.log('🔍 DEBUG-FRONTEND: Success! Received comparison data:', data);
       setResult(data);
       
       // Update URL with query parameters
@@ -83,6 +79,7 @@ export default function Home() {
       params.set('price', String(priceVal));
       router.push(`?${params.toString()}`);
     } catch (err) {
+      console.error('🔍 DEBUG-FRONTEND: Error during comparison:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast.error(err instanceof Error ? err.message : 'An unknown error occurred');
     } finally {
@@ -186,10 +183,24 @@ export default function Home() {
       {result && (
         <div className={`p-6 rounded-lg border ${getResultCardClass()} shadow-sm`}>
           <h2 className="text-2xl font-bold mb-4">Results</h2>
+          
+          {/* Data age warning banner */}
+          {result.dataAge && result.dataAge > 6 && (
+            <div className="mb-4 p-3 bg-yellow-50 border border-yellow-300 rounded text-yellow-800 text-sm">
+              <p className="font-medium">Data is {result.dataAgeMention}</p>
+              <p>Rental prices may have changed since data collection.</p>
+            </div>
+          )}
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
             <div>
               <p className="text-sm text-gray-600">Average Market Rent</p>
               <p className="text-xl font-semibold">${result.average.toFixed(2)}</p>
+              {result.adjustmentApplied && (
+                <p className="text-xs text-gray-500 mt-1">
+                  Est. current: ${result.adjustedAverage?.toFixed(2)}*
+                </p>
+              )}
             </div>
             <div>
               <p className="text-sm text-gray-600">Difference</p>
@@ -197,6 +208,11 @@ export default function Home() {
                 ${result.delta > 0 ? '+' : ''}
                 {result.delta.toFixed(2)}
               </p>
+              {result.adjustmentApplied && result.adjustedAverage && (
+                <p className="text-xs text-gray-500 mt-1">
+                  Est. current: ${(price - result.adjustedAverage).toFixed(2)}*
+                </p>
+              )}
             </div>
             <div>
               <p className="text-sm text-gray-600">Percentage</p>
@@ -204,8 +220,14 @@ export default function Home() {
                 {result.percent > 0 ? '+' : ''}
                 {(result.percent * 100).toFixed(1)}%
               </p>
+              {result.adjustmentApplied && result.adjustedAverage && (
+                <p className="text-xs text-gray-500 mt-1">
+                  Est. current: {((price - result.adjustedAverage) / result.adjustedAverage * 100).toFixed(1)}%*
+                </p>
+              )}
             </div>
           </div>
+          
           <div className="mt-2">
             {result.percent > 0.15 && (
               <p className="text-red-700 font-medium">
@@ -220,6 +242,12 @@ export default function Home() {
             {result.percent >= -0.15 && result.percent <= 0.15 && (
               <p className="text-yellow-700 font-medium">
                 This rent is close to the market average.
+              </p>
+            )}
+            
+            {result.adjustmentApplied && (
+              <p className="text-xs text-gray-600 mt-2">
+                *Estimated current value is adjusted for data age ({result.dataAgeMention}) using a 5% annual increase model.
               </p>
             )}
           </div>

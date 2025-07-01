@@ -20,25 +20,58 @@ async function testRentalData() {
         console.log(`${key}: ${firstRecord[key]}`);
       });
       
-      // List all unique cities in Ontario
-      const citySet = new Set<string>();
-      data.forEach(record => {
-        if (record.GEO) citySet.add(record.GEO);
+      // Extract all unique cities from the data
+      const cities = data.map(item => {
+        // Extract the city name from the GEO field
+        let city = item.GEO;
+        
+        // Remove province/state information
+        city = city.replace(/, Ontario$/, '')
+                  .replace(/, ON$/, '')
+                  .replace(/ \(Ontario\)$/, '')
+                  .replace(/ Ontario$/, '');
+        
+        // Remove CMA/CA/ER designations
+        city = city.replace(/ CMA$/, '')
+                  .replace(/ CA$/, '')
+                  .replace(/ \(CMA\)$/, '')
+                  .replace(/ \(CA\)$/, '')
+                  .replace(/ Census Metropolitan Area$/, '')
+                  .replace(/ Census Agglomeration$/, '')
+                  .replace(/ Economic Region$/, '');
+        
+        return city.trim();
       });
       
-      const cities = Array.from(citySet).sort();
-      console.log(`\nFound ${cities.length} unique locations:`);
-      cities.forEach(city => console.log(`- ${city}`));
+      // Get unique city names and sort alphabetically
+      const uniqueCities = Array.from(new Set(cities)).sort();
       
-      // List all unique bedroom types
-      const bedroomSet = new Set<string>();
-      data.forEach(record => {
-        if (record.Bedrooms) bedroomSet.add(record.Bedrooms);
+      console.log('\n=== ACTUAL CITIES AVAILABLE IN CMHC DATA ===');
+      console.log(`Found ${uniqueCities.length} unique cities:`);
+      console.log(JSON.stringify(uniqueCities, null, 2));
+      
+      // Also print as array format for easy copying
+      console.log('\n=== CITY ARRAY FOR CODE ===');
+      console.log(`export const ONTARIO_CITIES = [`);
+      uniqueCities.forEach((city, index) => {
+        console.log(`  '${city}'${index < uniqueCities.length - 1 ? ',' : ''}`);
       });
+      console.log(`];`);
       
-      const bedroomTypes = Array.from(bedroomSet).sort();
-      console.log(`\nFound ${bedroomTypes.length} bedroom types:`);
-      bedroomTypes.forEach(type => console.log(`- ${type}`));
+      // List bedroom types
+      const bedroomTypes = Array.from(new Set(data.map(item => item.Bedrooms))).sort();
+      console.log(`\nFound ${bedroomTypes.length} bedroom types:`, bedroomTypes);
+      
+      // Display years available in the data
+      const years = data
+        .map(r => r.Year)
+        .filter(y => y !== undefined) as number[];
+      
+      if (years.length > 0) {
+        const minYear = Math.min(...years);
+        const maxYear = Math.max(...years);
+        console.log(`\nData covers years: ${minYear} to ${maxYear}`);
+      }
       
       // Test a few specific city/bedroom combinations
       const testCases = [
