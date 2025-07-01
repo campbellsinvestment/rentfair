@@ -18,6 +18,11 @@ interface ComparisonResult {
   category?: string;
 }
 
+// Helper function to format money with commas
+const formatMoney = (value: number): string => {
+  return value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+};
+
 // Bedroom options
 const BEDROOM_OPTIONS = [
   { value: '0', label: 'Bachelor' },
@@ -279,6 +284,14 @@ export default function Home() {
         <section className={`result-card ${getResultCardClass()}`}>
           <h2>Results</h2>
           
+          {/* User's inputted rent - prominently displayed */}
+          <div className="user-rent-display">
+            <div className="user-rent-content">
+              <p className="result-label">Your Monthly Rent</p>
+              <p className="result-value primary-value">${formatMoney(price)}</p>
+            </div>
+          </div>
+          
           {/* Data age warning banner */}
           {result.dataAge && result.dataAge > 6 && (
             <div className="data-age-warning">
@@ -290,68 +303,66 @@ export default function Home() {
           <div className="result-grid">
             <div className="result-item">
               <p className="result-label">Average Market Rent</p>
-              <p className="result-value">${result.average.toFixed(2)}</p>
+              <p className="result-value highlight-value">${formatMoney(result.average)}</p>
               {result.adjustmentApplied && (
                 <p className="result-adjusted">
-                  Est. current: ${result.adjustedAverage?.toFixed(2)}*
+                  Est. current: ${formatMoney(result.adjustedAverage!)}*
                 </p>
               )}
             </div>
             <div className="result-item">
               <p className="result-label">Difference</p>
-              <p className="result-value">
+              <p className={`result-value ${result.delta > 0 ? 'text-red-600' : result.delta < 0 ? 'text-green-600' : ''} highlight-value`}>
+                <span className="market-indicator">
+                  {result.delta > 0 ? '↑' : result.delta < 0 ? '↓' : '•'}
+                </span>
                 ${result.delta > 0 ? '+' : ''}
-                {result.delta.toFixed(2)}
+                {formatMoney(result.delta)}
+                <span className="market-status">{result.delta > 0 ? 'above' : result.delta < 0 ? 'below' : 'at'} market</span>
               </p>
               {result.adjustmentApplied && result.adjustedAverage && (
-                <p className="result-adjusted">
-                  Est. current: ${(price - result.adjustedAverage).toFixed(2)}*
+                <p className={`result-adjusted ${(price - result.adjustedAverage) > 0 ? 'text-red-600' : 'text-green-600'}`}>
+                  <span className="market-indicator">
+                    {(price - result.adjustedAverage) > 0 ? '↑' : (price - result.adjustedAverage) < 0 ? '↓' : '•'}
+                  </span>
+                  Est. current: ${((price - result.adjustedAverage) > 0 ? '+' : '') + formatMoney(price - result.adjustedAverage)}*
                 </p>
               )}
             </div>
             <div className="result-item">
               <p className="result-label">Percentage</p>
-              <p className="result-value">
+              <p className={`result-value ${result.percent > 0 ? 'text-red-600' : result.percent < 0 ? 'text-green-600' : ''} highlight-value`}>
+                <span className="market-indicator">
+                  {result.percent > 0 ? '↑' : result.percent < 0 ? '↓' : '•'}
+                </span>
                 {result.percent > 0 ? '+' : ''}
                 {(result.percent * 100).toFixed(1)}%
+                <span className="market-status">{result.percent > 0 ? 'above' : result.percent < 0 ? 'below' : 'at'} market</span>
               </p>
               {result.adjustmentApplied && result.adjustedAverage && (
-                <p className="result-adjusted">
-                  Est. current: {((price - result.adjustedAverage) / result.adjustedAverage * 100).toFixed(1)}%*
+                <p className={`result-adjusted ${((price - result.adjustedAverage) / result.adjustedAverage) > 0 ? 'text-red-600' : 'text-green-600'}`}>
+                  <span className="market-indicator">
+                    {((price - result.adjustedAverage) / result.adjustedAverage) > 0 ? '↑' : ((price - result.adjustedAverage) / result.adjustedAverage) < 0 ? '↓' : '•'}
+                  </span>
+                  Est. current: {((price - result.adjustedAverage) / result.adjustedAverage > 0 ? '+' : '') + ((price - result.adjustedAverage) / result.adjustedAverage * 100).toFixed(1)}%*
                 </p>
               )}
             </div>
           </div>
           
-          <div className="result-summary">
-            {result.percent > 0.15 && (
-              <p className="summary-high">
-                This rent is above the market average.
-              </p>
-            )}
-            {result.percent < -0.15 && (
-              <p className="summary-low">
-                This rent is below the market average.
-              </p>
-            )}
-            {result.percent >= -0.15 && result.percent <= 0.15 && (
-              <p className="summary-average">
-                This rent is close to the market average.
-              </p>
-            )}
-            
-            {result.category && (
-              <p className="category-info">
-                Housing category: <span>{result.category}</span>
-              </p>
-            )}
-            
-            {result.adjustmentApplied && (
-              <p className="adjustment-note">
-                *Estimated current value is adjusted for data age ({result.dataAgeMention}) using a 5% annual increase model.
-              </p>
-            )}
-          </div>
+          {/* Remove these summary lines as they're now part of the ShareButton component */}
+          
+          {result.category && (
+            <p className="category-info">
+              Housing category: <span>{result.category}</span>
+            </p>
+          )}
+          
+          {result.adjustmentApplied && (
+            <p className="adjustment-note">
+              *Estimated current value is adjusted for data age ({result.dataAgeMention}) using a 5% annual increase model.
+            </p>
+          )}
           
           <div className="result-actions">
             <ShareButton percent={result.percent} />
@@ -390,31 +401,78 @@ export default function Home() {
       {/* Data Explanation Modal */}
       {showDataExplanation && (
         <div className="modal-overlay">
-          <div className="modal-content">
+          <div className="modal-content data-explanation-modal">
             <div className="modal-header">
               <h3>About the Data</h3>
               <button onClick={() => setShowDataExplanation(false)} className="modal-close">×</button>
             </div>
             <div className="modal-body">
-              <h4>Data Source</h4>
-              <p>The rent comparison data is sourced from the Canada Mortgage and Housing Corporation (CMHC), which conducts regular rental market surveys across Canadian cities.</p>
+              <div className="data-info-section">
+                <div className="data-info-icon">📊</div>
+                <div className="data-info-content">
+                  <h4>Data Source</h4>
+                  <p>
+                    <strong>Canada Mortgage and Housing Corporation (CMHC)</strong> official rental 
+                    market surveys across Canadian cities.
+                  </p>
+                </div>
+              </div>
               
-              <h4>Data Collection</h4>
-              <p>CMHC typically collects data twice a year (April and October) through surveys of property managers and landlords. The survey targets rental properties with three or more units.</p>
+              <div className="data-info-section">
+                <div className="data-info-icon">🗓️</div>
+                <div className="data-info-content">
+                  <h4>Collection Method</h4>
+                  <p>
+                    Surveys conducted <strong>twice yearly</strong> (April and October) 
+                    targeting rental properties with three or more units.
+                  </p>
+                </div>
+              </div>
               
-              <h4>Data Age</h4>
-              <p>When data is older than 6 months, we apply an estimated adjustment based on a 5% annual increase model to better reflect current market conditions.</p>
+              <div className="data-info-section">
+                <div className="data-info-icon">⏱️</div>
+                <div className="data-info-content">
+                  <h4>Data Age & Adjustments</h4>
+                  <p>
+                    For data older than 6 months, we apply an <strong>estimated 5% annual increase</strong> 
+                    to better reflect current market conditions.
+                  </p>
+                </div>
+              </div>
               
-              <h4>Limitations</h4>
-              <ul>
-                <li>The data may not include all types of rental properties, particularly basement apartments, single-family home rentals, or newly built units.</li>
-                <li>Regional variations within cities are not always reflected in the average.</li>
-                <li>Rental incentives (like one month free) may not be factored into the reported rents.</li>
-                <li>Data for smaller communities may be less comprehensive.</li>
-              </ul>
+              <div className="data-info-section">
+                <div className="data-info-icon">⚠️</div>
+                <div className="data-info-content">
+                  <h4>Limitations to Consider</h4>
+                  <ul className="data-limitations-list">
+                    <li>May not include basement apartments, single-family homes, or newly built units</li>
+                    <li>Regional variations within cities might not be fully reflected in averages</li>
+                    <li>Rental incentives (e.g., one month free) may not be factored into reported rents</li>
+                    <li>Data for smaller communities may be less comprehensive</li>
+                  </ul>
+                </div>
+              </div>
               
-              <h4>How to Interpret Results</h4>
-              <p>A rent that is within 15% of the average is considered to be at market rate. If your rent is more than 15% above average, you may be paying premium prices. If it's more than 15% below average, you likely have a good deal.</p>
+              <div className="data-info-section">
+                <div className="data-info-icon">🎯</div>
+                <div className="data-info-content">
+                  <h4>How to Interpret Results</h4>
+                  <div className="interpretation-guide">
+                    <div className="interpretation-item good">
+                      <span className="badge below">Below Average</span>
+                      <p>More than 15% below average: <strong>Good deal</strong></p>
+                    </div>
+                    <div className="interpretation-item fair">
+                      <span className="badge average">Market Rate</span>
+                      <p>Within 15% of average: <strong>Fair market rate</strong></p>
+                    </div>
+                    <div className="interpretation-item high">
+                      <span className="badge above">Above Average</span>
+                      <p>More than 15% above average: <strong>Premium pricing</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

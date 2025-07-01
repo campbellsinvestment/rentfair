@@ -27,33 +27,12 @@ export default function RootLayout({
         <footer>
           <div className="container">
             <div className="footer-content">
-              <div className="footer-column">
-                <h3>RentFair</h3>
-                <ul>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#data-info">Data Info</a></li>
-                </ul>
-              </div>
-              <div className="footer-column">
-                <h3>Resources</h3>
-                <ul>
-                  <li><a href="https://www.cmhc-schl.gc.ca/" target="_blank" rel="noopener noreferrer">CMHC Data</a></li>
-                  <li><a href="https://www.ontario.ca/page/renting-ontario-your-rights" target="_blank" rel="noopener noreferrer">Ontario Tenant Rights</a></li>
-                  <li><a href="https://tribunalsontario.ca/ltb/" target="_blank" rel="noopener noreferrer">Landlord and Tenant Board</a></li>
-                </ul>
-              </div>
-              <div className="footer-column">
-                <h3>Connect</h3>
-                <ul>
-                  <li><a href="mailto:info@rentfair.ca">Contact Us</a></li>
-                  <li><a href="/privacy">Privacy Policy</a></li>
-                  <li><a href="/terms">Terms of Use</a></li>
-                </ul>
-              </div>
+              <p className="footer-text">
+                Data sourced from Canada Mortgage and Housing Corporation (CMHC). RentFair does not collect or store any personal user data on this platform.
+              </p>
             </div>
             <div className="copyright">
-              © {new Date().getFullYear()} RentFair. All rights reserved. Data sourced from CMHC.
+              © {new Date().getFullYear()} RentFair. All rights reserved.
             </div>
           </div>
         </footer>
