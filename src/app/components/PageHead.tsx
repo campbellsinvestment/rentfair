@@ -12,7 +12,7 @@ export default function PageHead({ city = 'Ontario', averageRent, dataAge }: Pag
     const baseSchema = {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": `RentFair - ${city} Rent Comparison`,
+      "name": `Rent Fair Ontario - ${city} Rent Comparison`,
       "description": `Compare your ${city} apartment rent with official Statistics Canada market rates.`,
       "url": `https://rentfair.ca${city !== 'Ontario' ? `?city=${encodeURIComponent(city)}` : ''}`,
       "speakable": {
@@ -21,7 +21,7 @@ export default function PageHead({ city = 'Ontario', averageRent, dataAge }: Pag
       },
       "mainEntity": {
         "@type": "SoftwareApplication",
-        "name": "RentFair",
+        "name": "Rent Fair Ontario",
         "applicationCategory": "UtilityApplication",
         "operatingSystem": "Any"
       }
@@ -64,18 +64,18 @@ export default function PageHead({ city = 'Ontario', averageRent, dataAge }: Pag
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "How accurate is RentFair's rent comparison data?",
+                "name": "How accurate is Rent Fair Ontario's rent comparison data?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "RentFair uses official data from Statistics Canada, sourced from the Canada Mortgage and Housing Corporation (CMHC) Rental Market Survey. For data older than 6 months, we apply an estimated 5% annual increase to better reflect current market conditions."
+                  "text": "Rent Fair Ontario uses official data from Statistics Canada, sourced from the Canada Mortgage and Housing Corporation (CMHC) Rental Market Survey. For data older than 6 months, we apply an estimated 5% annual increase to better reflect current market conditions."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What cities does RentFair cover?",
+                "name": "What cities does Rent Fair Ontario cover?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "RentFair covers major cities across Ontario including Toronto, Ottawa, Hamilton, London, Windsor, Kingston, Kitchener-Waterloo, Sudbury, Thunder Bay, and many others."
+                  "text": "Rent Fair Ontario covers major cities across Ontario including Toronto, Ottawa, Hamilton, London, Windsor, Kingston, Kitchener-Waterloo, Sudbury, Thunder Bay, and many others."
                 }
               },
               {
@@ -83,7 +83,7 @@ export default function PageHead({ city = 'Ontario', averageRent, dataAge }: Pag
                 "name": "How do I know if my rent is fair?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "RentFair compares your rent to average market rates. If your rent is within 15% of average, it's considered a fair market rate. If it's more than 15% below average, you're getting a good deal. If it's more than 15% above average, you're paying premium pricing."
+                  "text": "Rent Fair Ontario compares your rent to average market rates. If your rent is within 15% of average, it's considered a fair market rate. If it's more than 15% below average, you're getting a good deal. If it's more than 15% above average, you're paying premium pricing."
                 }
               }
             ]
@@ -99,7 +99,7 @@ export default function PageHead({ city = 'Ontario', averageRent, dataAge }: Pag
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "RentFair",
+                "name": "Rent Fair Ontario",
                 "item": "https://rentfair.ca"
               },
               ${city !== 'Ontario' ? 
@@ -122,7 +122,7 @@ export default function PageHead({ city = 'Ontario', averageRent, dataAge }: Pag
             "@type": "Organization",
             "url": "https://rentfair.ca",
             "logo": "https://rentfair.ca/logo.png",
-            "name": "RentFair",
+            "name": "Rent Fair Ontario",
             "description": "Compare your Ontario apartment rent with official Statistics Canada market rates.",
             "sameAs": [
               // Add social media links when available

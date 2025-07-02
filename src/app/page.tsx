@@ -187,7 +187,7 @@ function MainContent() {
         <h1 itemProp="name">
           <span className="logo-with-icon">
             <img src="/logo/rentfair-icon.svg" alt="" className="title-icon" />
-            Rent Fair
+            Rent Fair Ontario
           </span>
         </h1>
         <p className="tagline" itemProp="description">
@@ -533,7 +533,7 @@ export default function Home() {
     <Suspense fallback={
       <div className="loading-container">
         <div className="loading-spinner"></div>
-        <p>Loading RentFair...</p>
+        <p>Loading Rent Fair Ontario...</p>
       </div>
     }>
       <SearchParamsProvider>
