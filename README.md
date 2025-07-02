@@ -4,7 +4,7 @@ Compare Ontario apartment rent to market rates and see if you're getting a fair 
 
 ## Live Demo
 
-[rentfair.ca](https://rentfair.ca)
+[rentfair.ca](https://rentfairontario.vercel.app)
 
 ## Features
 
