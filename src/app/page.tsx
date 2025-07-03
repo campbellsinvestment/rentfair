@@ -429,8 +429,8 @@ function MainContent() {
 
       {/* Modals */}
       {showLegend && (
-        <div className="modal-overlay">
-          <div className="modal-content">
+        <div className="modal-overlay" onClick={() => setShowLegend(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
               <h3>Housing Categories Explained</h3>
               <button onClick={() => setShowLegend(false)} className="modal-close">×</button>
@@ -450,8 +450,8 @@ function MainContent() {
       )}
 
       {showDataExplanation && (
-        <div className="modal-overlay">
-          <div className="modal-content data-explanation-modal">
+        <div className="modal-overlay" onClick={() => setShowDataExplanation(false)}>
+          <div className="modal-content data-explanation-modal" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
               <h3>About the Data</h3>
               <button onClick={() => setShowDataExplanation(false)} className="modal-close">×</button>
